@@ -211,7 +211,68 @@ html {
   color: @mainHeadlineColor;
 }
 
+/* Block - projects */
+.projects {
+  background-color: #fff;
+}
 
+.projects__inner {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projects__headline {
+  margin: 0;
+  padding-right: 45px;
+  padding-left: 85px;
+
+  
+  color: @mainHeadlineColor;
+  font-size: 16px;
+  line-height: 26px;
+}
+
+.projects__number {
+  font-size: 30px;
+  display: block;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-weight: 500;
+}
+
+.projects__list {
+  padding: 0 0 0 45px;
+  margin: 0;
+  min-height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex: 1;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.projects__item {
+  border: 2px solid #E5E5E5;
+}
+
+.projects__item div {
+  position: relative;
+  height: 67px;
+  width: 190px;
+  text-align: center;
+}
+
+.projects__project-logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
 
 /* Block - phone */
 .phone {
