@@ -1,0 +1,189 @@
+@mainFontColor: #6f6f6f;
+@mainHeadlineColor: #191919;
+@btnActionBG: #f65b25;
+@mainFontSize: 16px;
+
+
+* {
+	box-sizing: border-box;
+}
+
+html {
+	-webkit-text-size-adjust:100%;
+    -webkit-tap-highlight-color:transparent;
+    -webkit-font-smoothing: antialiased;
+}
+
+.page {
+	position: relative;
+
+	padding: 0;
+	margin: 0;
+
+	font-family: "Corbel", "Open Sans", Arial, sans-serif;
+	font-size: @mainFontSize;
+	font-weight: 400;
+	font-style: normal;
+	color: @mainFontColor;
+	line-height: 1.5;
+	word-wrap: break-word;
+}
+
+.visually-hidden {
+	position:absolute;
+    clip:rect(0 0 0 0);
+    width:1px;
+    height:1px;
+    margin:-1px;
+    overflow: hidden;
+}
+
+
+.btn {
+	display: inline-block;
+
+	text-align: center;
+  text-decoration: none;
+
+	outline: none;
+	overflow: hidden;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+// Action - Более заметная кнопка
+.btn--view-action {
+  position: relative;
+
+	background: @btnActionBG;
+	border: none;
+  box-shadow: 0px 0px 24.57px 2.43px rgba(0, 0, 0, 0.18); 
+  
+  z-index: 1;
+
+	&:after,
+  &:before {
+    content: '';
+    position: absolute;
+    left: -50%;
+    right: -50%;
+    height: 0;
+    padding-bottom: 200%;
+    background: darken(@btnActionBG, 1%);
+    mix-blend-mode: color-burn;
+    top: 0;
+    z-index: -1;
+    border-radius: 230px;
+    transition: transform 2s, background 5s;
+  }
+  
+  &:after {
+    border-top-right-radius: 40%;
+    border-bottom-left-radius: 40%;
+    transform: translate3d(-5%,6em,0) rotate(-45deg);
+  }
+  
+  &:before {
+    border-bottom-right-radius: 40%;
+    border-top-left-radius: 40%;
+    transform: translate3d(5%,6em,0) rotate(0deg);
+  }
+  
+  &:hover,
+  &:focus {
+    
+    &:before,
+    &:after {
+      transform: translate3d(0,-5em,0) rotate(180deg);
+      background: darken(@btnActionBG, 20%);
+    }
+  }
+}
+
+// Pseudo - Менее заметная кнопка
+.btn--view-pseudo {
+  position: relative;
+  border: none;
+  background-color: transparent;
+  background-image: url(../img/btn_gradient.svg);
+  background-repeat: no-repeat;
+}
+
+.btn--size-md {
+	width: 176px;
+	height: 42px;
+  line-height: 42px;
+
+  color: #fff;
+}
+
+.btn--size-sm {
+  width: 132px;
+  height: 34px;
+
+  color: @mainHeadlineColor;
+}
+
+.headline {
+  font-size: 25px;
+}
+
+
+/* Block - page-header */
+.page-header {
+  position: relative;
+  height: 500px;
+  width: 100%;
+
+  background: url(../img/header_bg_blue_wave.png) no-repeat top right;
+  -webkit-background-size: 80%;
+  background-size: 80%;
+
+  overflow: hidden;
+
+}
+
+.page-header__wave-main,
+.page-header__wave-part {
+  position: absolute;
+
+  height: 100%;
+  max-height: 500px;
+}
+
+.page-header__wave-main {
+  width: 71.7%;
+  top: 0;
+  left: 0;
+
+  background: url(../img/header_bg-main.png) no-repeat 0 bottom;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+.page-header__wave-part {
+  width: 28.5%;
+  top: 0;
+  right: 0;
+
+  background: url(../img/header_bg_2.png) no-repeat 0 bottom;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+}
+
+.page-header__brelok {
+  position: absolute;
+  top: 214.5px;
+  right: 15%;
+  transform: translateX(500%);
+  
+  transition: transform .6s;
+
+}
+
+.page-header__brelok--visible {
+  transform: translateX(0);
+}

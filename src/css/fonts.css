@@ -1,8 +1,7 @@
 /* Corel Regular */
 @font-face { 
   font-family: 'Corbel'; 
-  src: url('../fonts/corbel-regular.woff2') format('woff2'), 
-       url('../fonts/corbel-regular.woff') format('woff'); 
+  src: url('../fonts/corbel-regular.ttf'); 
   font-weight: 400; 
   font-style: normal; 
   font-display: swap;
@@ -11,8 +10,8 @@
 /* Corel Regular Italic */
 @font-face { 
   font-family: 'Corbel'; 
-  src: url('../fonts/corbel-regular-italic.woff2') format('woff2'), 
-       url('../fonts/corbel-regular-italic.woff') format('woff'); 
+  src: url('../fonts/corbel-italic.woff2') format('woff2'), 
+       url('../fonts/corbel-italic.woff') format('woff'); 
   font-weight: 400; 
   font-style: italic; 
   font-display: swap;
@@ -25,5 +24,15 @@
        url('../fonts/corbel-bold.woff') format('woff'); 
   font-weight: 700; 
   font-style: normal; 
+  font-display: swap;
+}
+
+/* Corel Bold Italic */
+@font-face { 
+  font-family: 'Corbel'; 
+  src: url('../fonts/corbel-bold-italic.woff2') format('woff2'), 
+       url('../fonts/corbel-bold-italic.woff') format('woff'); 
+  font-weight: 700; 
+  font-style: italic; 
   font-display: swap;
 }
