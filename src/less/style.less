@@ -25,7 +25,7 @@ html {
 	font-weight: 400;
 	font-style: normal;
 	color: @mainFontColor;
-	line-height: 1.5;
+  line-height: 1.2;
 	word-wrap: break-word;
 }
 
@@ -129,8 +129,20 @@ html {
 
 .headline {
   font-size: 25px;
+  line-height: 1.2;
+  color: @mainHeadlineColor;
 }
 
+
+/* Block - phone */
+.phone {
+  font-size: 20px;
+  line-height: 1;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-style: normal;
+  color: #fff;
+  text-decoration: none;
+}
 
 /* Block - page-header */
 .page-header {
@@ -201,7 +213,6 @@ html {
   margin-top: 30px;
   margin-bottom: 35px;
 
-  line-height: 1.1;
 }
 
 .page-header__headline {
@@ -209,6 +220,10 @@ html {
 
   font-size: 30px;
   color: @mainHeadlineColor;
+}
+
+.page-header__text {
+  margin: 0;
 }
 
 /* Block - projects */
@@ -274,12 +289,43 @@ html {
   transform: translate(-50%, -50%);
 }
 
-/* Block - phone */
-.phone {
-  font-size: 20px;
-  line-height: 1;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-style: normal;
-  color: #fff;
-  text-decoration: none;
+/* Block - production */
+.production {
+  background: #f0f0f0 url(../img/production_bg.png) no-repeat -520px 20%;
+}
+
+.production__inner {
+  max-width: 1140px;
+  padding: 100px 15px;
+  margin-left: auto;
+}
+
+.production__content {
+  max-width: 470px;
+  margin-left: auto;
+  margin-right: 80px;
+}
+
+.production__headline {
+  max-width: 300px;
+}
+
+.production__text p:first-child {
+  max-width: 410px;
+  color: @mainHeadlineColor;
+}
+
+.production__text p {
+  margin: 0;
+}
+
+.production__text hr {
+  width: 72%;
+  margin-right: auto;
+  margin-left: 0;
+  height: 2px;
+
+  border: 0;
+  background: #b7b7b7;
+  background: linear-gradient(to right, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
 }

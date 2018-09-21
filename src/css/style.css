@@ -16,7 +16,7 @@ html {
   font-weight: 400;
   font-style: normal;
   color: #6f6f6f;
-  line-height: 1.5;
+  line-height: 1.2;
   word-wrap: break-word;
 }
 .visually-hidden {
@@ -105,6 +105,17 @@ html {
 }
 .headline {
   font-size: 25px;
+  line-height: 1.2;
+  color: #191919;
+}
+/* Block - phone */
+.phone {
+  font-size: 20px;
+  line-height: 1;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-style: normal;
+  color: #fff;
+  text-decoration: none;
 }
 /* Block - page-header */
 .page-header {
@@ -169,12 +180,14 @@ html {
   max-width: 405px;
   margin-top: 30px;
   margin-bottom: 35px;
-  line-height: 1.1;
 }
 .page-header__headline {
   margin: 0;
   font-size: 30px;
   color: #191919;
+}
+.page-header__text {
+  margin: 0;
 }
 /* Block - projects */
 .projects {
@@ -244,12 +257,39 @@ html {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
-/* Block - phone */
-.phone {
-  font-size: 20px;
-  line-height: 1;
-  font-family: "Open Sans", Arial, sans-serif;
-  font-style: normal;
-  color: #fff;
-  text-decoration: none;
+/* Block - production */
+.production {
+  background: #f0f0f0 url(../img/production_bg.png) no-repeat -520px 20%;
+}
+.production__inner {
+  max-width: 1140px;
+  padding: 100px 15px;
+  margin-left: auto;
+}
+.production__content {
+  max-width: 470px;
+  margin-left: auto;
+  margin-right: 80px;
+}
+.production__headline {
+  max-width: 300px;
+}
+.production__text p:first-child {
+  max-width: 410px;
+  color: #191919;
+}
+.production__text p {
+  margin: 0;
+}
+.production__text hr {
+  width: 72%;
+  margin-right: auto;
+  margin-left: 0;
+  height: 2px;
+  border: 0;
+  background: #b7b7b7;
+  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(1%, #b7b7b7), color-stop(99%, #b7b7b7), to(transparent));
+  background: -webkit-linear-gradient(left, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
+  background: -o-linear-gradient(left, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
+  background: linear-gradient(to right, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
 }
