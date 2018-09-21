@@ -112,24 +112,15 @@ html {
   height: 500px;
   width: 100%;
   background: url(../img/header_bg_blue_wave.png) no-repeat top right;
-  background-size: 80%;
   overflow: hidden;
 }
-.page-header__wave-main,
 .page-header__wave-part {
   position: absolute;
   height: 100%;
   max-height: 500px;
 }
-.page-header__wave-main {
-  width: 71.7%;
-  top: 0;
-  left: 0;
-  background: url(../img/header_bg-main.png) no-repeat 0 bottom;
-  background-size: 100%;
-}
 .page-header__wave-part {
-  width: 28.5%;
+  width: 385px;
   top: 0;
   right: 0;
   background: url(../img/header_bg_2.png) no-repeat 0 bottom;
