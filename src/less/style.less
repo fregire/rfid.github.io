@@ -430,7 +430,7 @@ html {
 .works__inner {
   max-width: 1345px;
   margin: 0 auto;
-  padding: 50px 15px;
+  padding: 60px 15px;
 }
 
 .works__headline {
@@ -658,4 +658,146 @@ html {
   margin-bottom: 0;
 
   font-size: 14px;
+}
+
+/* Block - adv-text */
+.adv-text {
+  background: url(../img/adv-text_bg.png) no-repeat left center;
+}
+
+.adv-text__inner {
+  position: relative;
+
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 177px 35px;
+}
+
+.adv-text__wrapper {
+  position: relative;
+
+  max-width: 522px;
+  display: inline-block;
+}
+
+.adv-text__content {
+  position: relative;
+
+  max-height: 156px;
+  padding-bottom: 10px;
+
+  overflow: hidden;
+}
+
+.adv-text__content:after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+
+  height: 80px;
+  width: 100%;
+  display: block;
+  content: "";
+
+  background: url(../img/adv-text_gradient.png) no-repeat 0 -10%;
+}
+
+.adv-text__headline,
+.adv-text__text {
+  color: #fff;
+}
+
+.adv-text__headline {
+  margin-top: 0;
+}
+
+.adv-text__text {
+  margin: 0;
+}
+
+.adv-text__scroll-bar {
+  top: 5px;
+  left: -30px;
+
+  height: 98%;
+}
+
+.adv-text__btn {
+  display: block;
+  margin-top: 10px;
+}
+
+.adv-text__card {
+  position: absolute;
+  top: 0;
+  right: 20px;
+
+  z-index: 10;
+}
+
+/* Block - scroll-bar */
+.scroll-bar {
+  position: absolute;
+
+  width: 18px;
+
+  background: #fff;
+  border-radius: 9px;
+}
+
+.scroll-bar__arrow {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  border: 3px solid transparent;
+  border-radius: 9px;
+  background: transparent;
+}
+
+.scroll-bar__arrow:after {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+
+  content: "";
+  display: block;
+
+  border: 6px solid transparent;
+}
+
+.scroll-bar__arrow--bottom {
+  bottom: 0;
+}
+
+.scroll-bar__arrow--bottom:after {
+  border-top: 6px solid #5481ba;
+}
+
+.scroll-bar__arrow--top {
+  top: 0;
+}
+
+.scroll-bar__arrow--top:after {
+  border-bottom: 6px solid #5481ba;
+}
+
+.scroll-bar__slider {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 30px;
+  height: 30px;
+
+  background: url(../img/scroll-bar_slider.png) no-repeat center center;  
+}
+
+
+.scroll-bar__arrow:hover,
+.scroll-bar__slider:hover {
+  cursor: pointer;
 }
