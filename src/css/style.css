@@ -446,6 +446,9 @@ html {
   font-size: 14px;
 }
 /* Block - scheme */
+.scheme {
+  padding: 100px 0;
+}
 .scheme__inner {
   position: relative;
   max-width: 1270px;
@@ -473,7 +476,7 @@ html {
 }
 .scheme__line {
   position: absolute;
-  bottom: 0;
+  bottom: 5px;
   left: 50%;
   -webkit-transform: translateX(-50%);
       -ms-transform: translateX(-50%);
