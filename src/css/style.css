@@ -95,7 +95,6 @@ html {
 .btn--size-md {
   width: 176px;
   height: 42px;
-  line-height: 42px;
 }
 .btn--size-sm {
   width: 132px;
@@ -977,4 +976,29 @@ html {
 }
 .services__name {
   margin: 5px 0 20px;
+}
+/* Block - sale */
+.sale {
+  color: #fff;
+  text-align: center;
+  background: url(../img/sale_bg.png) no-repeat 0 center;
+  background-size: 80%;
+}
+.sale__inner {
+  max-width: 460px;
+  margin: 0 auto;
+  padding: 35px 15px;
+}
+.sale__headline {
+  margin: 0;
+  font-size: 36px;
+  line-height: 1;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.sale__text {
+  margin: 20px 0;
+  font-size: 18px;
+  font-family: "Open Sans", Arial, sans-serif;
+  line-height: 1.5;
 }
