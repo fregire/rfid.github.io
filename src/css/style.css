@@ -813,15 +813,18 @@ html {
   font-size: 22px;
   font-weight: 400;
 }
-.model-item__sub-text {
+.model-item__sub-text,
+.model-item__item {
   font-family: "Open Sans", Arial, sans-serif;
+}
+.model-item__sub-text {
   font-size: 18px;
 }
 .model-item__list {
   margin: 30px 0 20px;
 }
 .model-item__item {
-  font-weight: 700;
+  font-size: 15px;
 }
 .model-item__btn {
   margin-left: -8px;
