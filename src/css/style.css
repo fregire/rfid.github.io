@@ -928,7 +928,7 @@ html {
 }
 /* Block - services */
 .services__inner {
-  max-width: 1200px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 60px 15px;
   color: #fff;
@@ -950,7 +950,7 @@ html {
   position: relative;
   width: 260px;
   padding: 40px 20px 24px;
-  margin: 0 20px 40px;
+  margin: 0 23px 40px;
   text-align: center;
   background: -webkit-linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
   background: -o-linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
@@ -982,12 +982,11 @@ html {
   color: #fff;
   text-align: center;
   background: url(../img/sale_bg.png) no-repeat 0 center;
-  background-size: 80%;
 }
 .sale__inner {
   max-width: 460px;
   margin: 0 auto;
-  padding: 35px 15px;
+  padding: 70px 15px;
 }
 .sale__headline {
   margin: 0;
@@ -1001,4 +1000,61 @@ html {
   font-size: 18px;
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.5;
+}
+/* Block - req */
+.req__inner {
+  max-width: 1130px;
+  margin: 0 auto;
+  padding: 30px 15px;
+}
+.req__headline {
+  margin: 0;
+  font-size: 30px;
+  color: #191919;
+}
+.req__descr {
+  max-width: 380px;
+  margin-bottom: 0;
+  color: #191919;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+}
+.req__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.req__consider {
+  width: 50%;
+}
+.req__consider-headline {
+  margin: 0;
+  color: #191919;
+}
+.req__consider-list {
+  margin-left: -38px;
+  padding: 0;
+  max-width: 370px;
+}
+.req__icons img {
+  max-height: 25px;
+}
+.req__requirements-block {
+  color: #191919;
+}
+.req__requirements-block h3 {
+  margin: 0 0 10px;
+}
+.req__tools {
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 15px;
+}
+.req__tools strong {
+  font-weight: 700;
+  line-height: 1.5;
+  font-size: 18px;
+  font-family: "Corbel", Arial, sans-serif;
 }
