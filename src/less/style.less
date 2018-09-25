@@ -692,25 +692,7 @@ html {
 }
 
 .adv-text__content {
-  position: relative;
-
-  max-height: 156px;
   padding-bottom: 10px;
-
-  overflow: hidden;
-}
-
-.adv-text__content:after {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-
-  height: 80px;
-  width: 100%;
-  display: block;
-  content: "";
-
-  background: url(../img/adv-text_gradient.png) no-repeat 0 -10%;
 }
 
 .adv-text__headline,
@@ -1003,12 +985,16 @@ html {
   justify-content: space-between;
 }
 
+.applying__content {
+  padding-left: 5px;
+}
+
 .applying__content:first-child {
   max-width: 480px;
 }
 
 .applying__content:last-child {
-  max-width: 600px;
+  max-width: 610px;
 }
 
 .applying__headline,
@@ -1044,14 +1030,16 @@ html {
 }
 
 .applying__order-list {
-  list-style: none;
   flex-wrap: wrap;
+  margin-top: 30px;
+
+  list-style: none;
 }
 
 .applying__order-item {
   width: 285px;
   margin-right: 30px;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .applying__order-item:nth-child(even){
@@ -1239,6 +1227,8 @@ html {
 }
 
 .req__requirements-block {
+  margin-top: -26px;
+
   color: @mainHeadlineColor;
 }
 
@@ -1286,7 +1276,7 @@ html {
 
 .page-footer__item {
   width: 20%;
-  
+
   color: @mainHeadlineColor;
 }
 .page-footer__item--middle {
@@ -1324,4 +1314,69 @@ html {
 
 .social__link {
   display: block;
+}
+
+
+/* JavaScript */
+.applying__content {
+  position: relative;
+
+  max-height: 280px;
+
+  overflow: hidden;
+}
+
+.applying__content:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  
+  display: block;
+  content: "";
+  height: 100px;
+  width: 100%;
+
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 75%, #fff 100%);
+}
+
+.adv-text__content {
+  position: relative;
+
+  max-height: 156px;
+
+  overflow: hidden;
+}
+
+.adv-text__content:after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+
+  height: 80px;
+  width: 100%;
+  display: block;
+  content: "";
+
+  background: url(../img/adv-text_gradient.png) no-repeat 0 -10%;
+}
+
+.production__text--hidden {
+  position: relative;
+
+  max-height: 150px;
+
+  overflow: hidden;
+}
+
+.production__text--hidden:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  height: 80px;
+  width: 100%;
+  display: block;
+  content: "";
+
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 75%, #fff 100%);
 }
