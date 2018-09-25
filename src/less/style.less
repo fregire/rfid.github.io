@@ -1091,3 +1091,62 @@ html {
 
   background: url(../img/dot_icon.png) no-repeat 0 center;
 }
+
+/* Block - services */
+.services__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 15px;
+
+  color: #fff;
+}
+
+.services__headline {
+  text-align: center;
+}
+
+.services__list {
+  padding: 0;
+  margin: 30px -20px 0;
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.services__item {
+  position: relative;
+
+  width: 260px;
+  padding: 40px 20px 24px;
+  margin: 0 20px 40px;
+
+  text-align: center;
+
+  background: linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.37); 
+  border-radius: 30px;
+}
+
+.services__item:after {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+
+  display: block;
+  content: "";
+  width: 25px;
+  height: 25px;
+
+  background: #fff;
+  border-radius: 50%;
+}
+
+.services__num {
+  font-size: 48px;
+  font-family: "Open Sans", Arial, sans-serif;
+}
+
+.services__name {
+  margin: 5px 0 20px;
+}
