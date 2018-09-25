@@ -108,10 +108,11 @@ html {
 // Pseudo - Менее заметная кнопка
 .btn--view-pseudo {
   position: relative;
-  border: none;
-  background-color: transparent;
-  background-image: url(../img/btn_gradient.svg);
-  background-repeat: no-repeat;
+
+  color: #fff;
+
+  border: 2px solid #fff;
+  background: transparent;
 }
 
 .btn--size-md {
@@ -123,8 +124,6 @@ html {
 .btn--size-sm {
   width: 132px;
   height: 34px;
-
-  color: @mainHeadlineColor;
 }
 
 .headline {
@@ -804,4 +803,116 @@ html {
 .scroll-bar__arrow:hover,
 .scroll-bar__slider:hover {
   cursor: pointer;
+}
+
+/* Block - shape */
+.shape {
+  margin-top: -130px;
+}
+
+.shape__inner {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 0 15px 80px;
+}
+
+.shape__content {
+  max-width: 505px;
+}
+
+.shape__content p {
+  margin: 0;
+}
+
+.shape__btn {
+  margin-top: 28px;
+
+  background: transparent url(../img/btn_gradient.svg) no-repeat center center;
+  -webkit-background-size: 100%;
+  background-size: 100%;
+  border: 0;
+}
+
+.shape__view {
+  display: flex;
+  margin: 50px -60px;
+}
+
+
+.shape__main-view {
+  flex: 1;
+}
+
+.shape__main-slider {
+  max-width: 330px;
+  padding-bottom: 60px;
+  margin: 0 auto;
+
+  background: url(../img/shape_slider_bg.png) no-repeat center bottom;
+}
+
+.shape__main-item {
+  position: relative;
+
+  height: 228px;
+
+  text-align: center;
+}
+
+.shape__main-item img {
+  position: relative;
+
+  min-height: 100%;
+
+  z-index: 10;
+}
+
+.shape__main-item:before {
+  position: absolute;
+  bottom: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 100%;
+  height: 50px;
+  display: block;
+  content: "";
+
+  background: url(../img/shape_item-shadow.png) no-repeat center center;
+}
+
+.shape__list {
+  padding: 0;
+  margin: 0;
+  width: 530px;
+  display: flex;
+  flex-wrap: wrap;
+
+  list-style: none;
+}
+
+.shape__item {
+  width: 25%;
+  margin-bottom: 30px;
+  text-align: center;
+
+}
+
+.shape__item:hover {
+  cursor: pointer;
+}
+
+/* Block - model */
+.model {
+  position: relative;
+
+  color: #fff;
+  
+  background: url(../img/model_bg.png) no-repeat;
+}
+
+.model__inner {
+  max-width: 1030px;
+  margin: 0 auto;
+  padding: 60px 15px;
 }
