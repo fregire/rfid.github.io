@@ -263,7 +263,7 @@ html {
 }
 /* Block - production */
 .production {
-  background: #f0f0f0 url(../img/production_bg.png) no-repeat -520px 20%;
+  background: #f0f0f0 url(../img/production_bg.png) no-repeat -520px -200px;
 }
 .production__inner {
   max-width: 1140px;
