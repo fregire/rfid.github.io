@@ -6,13 +6,15 @@ html {
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: transparent;
   -webkit-font-smoothing: antialiased;
+  font-size: 62.5%;
 }
 .page {
   position: relative;
   padding: 0;
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1400px;
   font-family: "Corbel", "Open Sans", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 1.6rem;
   font-weight: 400;
   font-style: normal;
   color: #6f6f6f;
@@ -107,13 +109,13 @@ html {
   height: 34px;
 }
 .headline {
-  font-size: 25px;
+  font-size: 2.5rem;
   line-height: 1.2;
   color: #191919;
 }
 /* Block - phone */
 .phone {
-  font-size: 20px;
+  font-size: 2rem;
   line-height: 1;
   font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
@@ -123,7 +125,6 @@ html {
 /* Block - page-header */
 .page-header {
   position: relative;
-  height: 500px;
   width: 100%;
   background: url(../img/header_bg_blue_wave.png) no-repeat top right;
   overflow: hidden;
@@ -143,7 +144,7 @@ html {
 .page-header__brelok {
   position: absolute;
   top: 214.5px;
-  right: 15%;
+  right: 200px;
   -webkit-transform: translateX(500%);
       -ms-transform: translateX(500%);
           transform: translateX(500%);
@@ -186,7 +187,7 @@ html {
 }
 .page-header__headline {
   margin: 0;
-  font-size: 30px;
+  font-size: 3rem;
   color: #191919;
 }
 .page-header__text {
@@ -214,11 +215,11 @@ html {
   padding-right: 45px;
   padding-left: 85px;
   color: #191919;
-  font-size: 16px;
+  font-size: 1.6rem;
   line-height: 26px;
 }
 .projects__number {
-  font-size: 30px;
+  font-size: 3rem;
   display: block;
   font-family: "Open Sans", Arial, sans-serif;
   font-weight: 500;
@@ -575,7 +576,7 @@ html {
 }
 .scheme-item__descr {
   margin-bottom: 0;
-  font-size: 14px;
+  font-size: 1.4rem;
 }
 /* Block - adv-text */
 .adv-text {
@@ -804,7 +805,7 @@ html {
 /* Block - model-item */
 .model-item__headline {
   margin: 0;
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 400;
 }
 .model-item__sub-text,
@@ -812,13 +813,13 @@ html {
   font-family: "Open Sans", Arial, sans-serif;
 }
 .model-item__sub-text {
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 .model-item__list {
   margin: 30px 0 20px;
 }
 .model-item__item {
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 .model-item__btn {
   margin-left: -8px;
@@ -863,7 +864,7 @@ html {
 }
 .applying__sphere-list li {
   margin-bottom: 5px;
-  font-size: 18px;
+  font-size: 1.8rem;
 }
 .applying__order-list,
 .applying__order-item {
@@ -968,7 +969,7 @@ html {
   border-radius: 50%;
 }
 .services__num {
-  font-size: 48px;
+  font-size: 4.8rem;
   font-family: "Open Sans", Arial, sans-serif;
 }
 .services__name {
@@ -987,14 +988,14 @@ html {
 }
 .sale__headline {
   margin: 0;
-  font-size: 36px;
+  font-size: 3.6rem;
   line-height: 1;
   text-transform: uppercase;
   font-weight: 400;
 }
 .sale__text {
   margin: 20px 0;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: "Open Sans", Arial, sans-serif;
   line-height: 1.5;
 }
@@ -1006,14 +1007,14 @@ html {
 }
 .req__headline {
   margin: 0;
-  font-size: 30px;
+  font-size: 3rem;
   color: #191919;
 }
 .req__descr {
   max-width: 380px;
   margin-bottom: 0;
   color: #191919;
-  font-size: 22px;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 1;
 }
@@ -1048,12 +1049,12 @@ html {
 }
 .req__tools {
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
 .req__tools strong {
   font-weight: 700;
   line-height: 1.5;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-family: "Corbel", Arial, sans-serif;
 }
 /* Block - page-footer */
@@ -1093,12 +1094,12 @@ html {
 .page-footer__item-info {
   margin-top: 5px;
   font-family: "Open Sans", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 1.8rem;
   font-weight: 700;
   font-style: normal;
 }
 .page-footer__item-info--middle {
-  font-size: 14px;
+  font-size: 1.4rem;
   text-transform: uppercase;
   line-height: 18px;
 }
