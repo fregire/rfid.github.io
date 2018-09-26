@@ -364,10 +364,26 @@ html {
 
 .features__item {
   position: relative;
+  transform: translateX(0);
   
   display: flex;
   align-items: center;
   margin-bottom: 60px;
+
+  opacity: 1;
+  transition: opacity .8s, transform .8s;
+}
+
+.features__item--hidden {
+  opacity: 0;
+}
+
+.features__item--hidden:nth-child(even) {
+  transform: translateX(50px);
+}
+
+.features__item--hidden:nth-child(odd) {
+  transform: translateX(-50px);
 }
 
 .features__item:nth-child(even) .features__content{

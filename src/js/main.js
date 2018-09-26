@@ -1,5 +1,9 @@
 
 $(document).ready(function(){
+	function isVisible(elem){
+		var result = elem.getBoundingClientRect().top < (screen.height - 100);
+		return result;
+	}
 
 	// Появление брелка
 	$(".page-header__brelok").delay(5000).addClass("page-header__brelok--visible");
@@ -23,5 +27,17 @@ $(document).ready(function(){
 		yPos = $(window).scrollTop() /  speed;
 		var coords = -yPos + startedPosXOfBg + 'px';
 		$(".production").css({ backgroundPositionY: coords });
+	});
+
+	// Поочередное появление преимуществ
+	// Прогрессивное улучшение 
+	$(".features__item").addClass("features__item--hidden");
+
+	$(window).scroll(function(e){
+		if(isVisible(document.querySelector(".features__list"))){
+			$(".features__item").each(function(i) {
+			    $(this).delay(1000 * i).removeClass("features__item--hidden");
+			});				
+		}
 	});
 });
