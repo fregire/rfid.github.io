@@ -47,7 +47,18 @@ $(document).ready(function(){
 		prevArrow: "<button class='works__arrow slider-arrow slider-arrow--prev' title='Предыдущие работы'></button>",
 		nextArrow: "<button class='works__arrow slider-arrow slider-arrow--next' title='Следующие работы'></button>",
 	});
-	
+	// Слайдер с формами брелков
+	$(".shape__main-slider").slick({
+		slidesToShow: 1,
+		prevArrow: "<button class='shape__main-slider-arrow slider-arrow slider-arrow--prev' title='Предыдущие работы'></button>",
+		nextArrow: "<button class='shape__main-slider-arrow slider-arrow slider-arrow--next' title='Следующие работы'></button>",
+	});
+	// Выбор формы брелка и перелистывание к этой форме
+	$(".shape__item").click(function(){
+		var index = $(this).attr("data-index");
+		$(".shape__main-slider").slick("slickGoTo", parseInt(index));
+	});
+
 	(function(){
 		var sliderBar = document.querySelector(".scroll-bar");
 		var sliderArrowHeight = document.querySelector(".scroll-bar__arrow--top").clientHeight;
