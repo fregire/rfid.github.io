@@ -148,11 +148,11 @@ html {
   -webkit-transform: translateX(500%);
       -ms-transform: translateX(500%);
           transform: translateX(500%);
-  -webkit-transition: -webkit-transform .6s;
-  transition: -webkit-transform .6s;
-  -o-transition: transform .6s;
-  transition: transform .6s;
-  transition: transform .6s, -webkit-transform .6s;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  -o-transition: transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 .page-header__brelok--visible {
   -webkit-transform: translateX(0);
