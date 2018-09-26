@@ -1,5 +1,6 @@
+
 $(document).ready(function(){
-	$(".page-header__brelok").delay(1000).addClass("page-header__brelok--visible");
+	$(".page-header__brelok").delay(3000).addClass("page-header__brelok--visible");
 
 	// Slick - слайдеры
 
