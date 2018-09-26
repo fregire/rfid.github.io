@@ -473,6 +473,10 @@ html {
   letter-spacing: -.3em;
 }
 
+.works__list:hover .works__arrow {
+  display: block;
+}
+
 .works__items-group {
   display: inline-block;
   width: 16.4%;
@@ -541,6 +545,8 @@ html {
   position: absolute; 
   top: 50%;
   transform: translateY(-60%);
+
+  display: none;
 
   background: rgba(255, 255, 255, .6);
   -webkit-background-size: 15px;
@@ -774,6 +780,8 @@ html {
 
 .adv-text__content {
   padding-bottom: 10px;
+  max-height: 155px;
+  overflow: hidden;
 }
 
 .adv-text__headline,
@@ -806,7 +814,7 @@ html {
   top: 0;
   right: 20px;
 
-  z-index: 10;
+  z-index: 9;
 }
 
 /* Block - scroll-bar */
@@ -860,9 +868,9 @@ html {
 
 .scroll-bar__slider {
   position: absolute;
-  top: 20px;
+  top: 0;
   left: 50%;
-  transform: translateX(-50%);
+  transform: translate(-50%, 15px);
 
   width: 30px;
   height: 30px;
@@ -1425,7 +1433,7 @@ html {
 
   max-height: 156px;
 
-  overflow: hidden;
+  z-index: 10;
 }
 
 .adv-text__content:after {

@@ -421,6 +421,9 @@ html {
   list-style: none;
   letter-spacing: -0.3em;
 }
+.works__list:hover .works__arrow {
+  display: block;
+}
 .works__items-group {
   display: inline-block;
   width: 16.4%;
@@ -479,6 +482,7 @@ html {
   -webkit-transform: translateY(-60%);
       -ms-transform: translateY(-60%);
           transform: translateY(-60%);
+  display: none;
   background: rgba(255, 255, 255, 0.6);
   background-size: 12px;
   z-index: 10;
@@ -669,6 +673,8 @@ html {
 }
 .adv-text__content {
   padding-bottom: 10px;
+  max-height: 155px;
+  overflow: hidden;
 }
 .adv-text__headline,
 .adv-text__text {
@@ -693,7 +699,7 @@ html {
   position: absolute;
   top: 0;
   right: 20px;
-  z-index: 10;
+  z-index: 9;
 }
 /* Block - scroll-bar */
 .scroll-bar {
@@ -735,11 +741,11 @@ html {
 }
 .scroll-bar__slider {
   position: absolute;
-  top: 20px;
+  top: 0;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-      -ms-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, 15px);
+      -ms-transform: translate(-50%, 15px);
+          transform: translate(-50%, 15px);
   width: 30px;
   height: 30px;
   background: url(../img/dot_icon.png) no-repeat center center;
@@ -1216,7 +1222,7 @@ html {
 .adv-text__content {
   position: relative;
   max-height: 156px;
-  overflow: hidden;
+  z-index: 10;
 }
 .adv-text__content:after {
   position: absolute;
