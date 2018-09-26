@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	function isVisible(elem){
-		var result = elem.getBoundingClientRect().top < (screen.height - 100);
+		var result = elem.getBoundingClientRect().top < (screen.height - 200);
 		return result;
 	}
 
@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 	// Slick - слайдеры
 
-	// Слайдер с работами
+	// Слайдер с работами(компаниями)
 	$(".projects__item").slick({
 		fade: true,
 		autoplay: true,
@@ -39,5 +39,12 @@ $(document).ready(function(){
 			    $(this).delay(1000 * i).removeClass("features__item--hidden");
 			});				
 		}
+	});
+
+	// Слайдер с работами(брелками)
+	$(".works__list").slick({
+		slidesToShow: 6,
+		prevArrow: "<button class='works__arrow slider-arrow slider-arrow--prev' title='Предыдущие работы'></button>",
+		nextArrow: "<button class='works__arrow slider-arrow slider-arrow--next' title='Следующие работы'></button>",
 	});
 });
