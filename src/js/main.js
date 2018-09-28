@@ -63,6 +63,8 @@ $(document).ready(function(){
 		$(this).parent().toggleClass("applying__content--hidden");
 	});
 
+
+	// Ползунок для текста
 	(function(){
 		var sliderBar = document.querySelector(".scroll-bar");
 		var sliderArrowHeight = document.querySelector(".scroll-bar__arrow--top").clientHeight;
@@ -138,4 +140,14 @@ $(document).ready(function(){
 			scrollArrows[i].addEventListener("click", onScrollArrowsClick);
 		}
 	})();
+
+	$(".popup__close-btn").click(function(){
+		$(".popup").fadeOut();
+	});
+
+	$(".js-open-popup").click(function(){
+		$(".popup").fadeIn();
+		var screenName = $(this).closest("[data-screen]").attr("data-screen") || "Обычная заявка";
+		$(".popup__input[type='hidden']").val(screenName);
+	});
 });

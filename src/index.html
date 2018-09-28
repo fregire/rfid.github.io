@@ -13,7 +13,7 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body class="page">
-	<header class="page-header">
+	<header class="page-header" data-screen="Первый экран на сайте">
 		<img src="img/example.png" alt="" class="page-header__brelok">
 		<div class="page-header__wave-part"></div>
 		<div class="page-header__inner">
@@ -31,7 +31,7 @@
 					<p>Бесконтактные карты брелоки компактного формата, изготовленные нашей компанией для любых сфер бизнеса и систем контроля доступа. В “умный” брелок SmartTAG®, как и в стандартную смарт-карту, встроен чип с антенной, способный решить множество деловых задач.</p>
 				</div>				
 			</div>
-			<button class="btn btn--view-action btn--size-md">Заказать звонок</button>
+			<button class="btn btn--view-action btn--size-md js-open-popup">Заказать звонок</button>
 		</div>
 	</header>
 	<main class="page-main">
@@ -328,7 +328,7 @@
 			</div>
 		</section>
 		<!-- adv-text - advantages text - текст преимуществ -->
-		<section class="adv-text">
+		<section class="adv-text" data-screen="Экран - Преимущества RFID брелка EPOXY Tag">
 			<div class="adv-text__inner">
 				<div class="adv-text__wrapper">
 					<h2 class="adv-text__headline headline">Преимущества<br> RFID брелка EPOXY Tag</h2>
@@ -345,16 +345,16 @@
 						<div class="scroll-bar__slider"></div>
 					</div>				
 				</div>
-				<button class="adv-text__btn btn btn--size-md btn--view-action">Заказать</button>
+				<button class="adv-text__btn btn btn--size-md btn--view-action js-open-popup">Заказать</button>
 				<img class="adv-text__card" src="img/adv-text_card.png" alt="Карта Rfidstyle">
 			</div>
 		</section>
-		<section class="shape">
+		<section class="shape" data-screen="Экран - Формы брелков">
 			<div class="shape__inner">
 				<div class="shape__content">
 					<h2 class="headline">Формы брелков</h2>
 					<p>RFID брелок EPOXY Tag -это карты-брелоки с различными размерами, форматами и возможностью нанесения логотипа вашей компании или другой информации. Данные карты-брелоки специально разработаны в</p>
-					<button class="shape__btn btn btn--size-sm">Заказать</button>
+					<button class="shape__btn btn btn--size-sm js-open-popup">Заказать</button>
 				</div>
 				<div class="shape__view">
 					<div class="shape__main-view">
@@ -402,7 +402,7 @@
 					<h2 class="model__headline">Модели и виды RFID-чипов</h2>
 					<div>
 						<ul class="model__list">
-							<li class="model__item model-item">
+							<li class="model__item model-item" data-screen="Экран - Модели и виды RFID-чипов - Высокочастотные">
 								 <h3 class="model-item__headline">Высокочастотные</h3>
 								 <span class="model-item__sub-text">(13,56 мгц)</span>
 								 <ul class="model-item__list">
@@ -410,11 +410,11 @@
 								 	<li class="model-item__item">ICODE SLIX / SLIX 2</li>
 								 	<li class="model-item__item">UCODE</li>
 								 </ul>
-								 <button class="model-item__btn btn btn--size-sm btn--view-pseudo">Заказать</button>
+								 <button class="model-item__btn btn btn--size-sm btn--view-pseudo js-open-popup">Заказать</button>
 							</li>
 						</ul>
 						<ul class="model__list">
-							<li class="model__item model-item">
+							<li class="model__item model-item" data-screen="Экран - Модели и виды RFID-чипов - Низкочастотные">
 								 <h3 class="model-item__headline">Низкочастотные</h3>
 								 <span class="model-item__sub-text">(125 мгц)</span>
 								 <ul class="model-item__list">
@@ -422,7 +422,7 @@
 								 	<li class="model-item__item">TEMIC T5557</li>
 								 	<li class="model-item__item">HID</li>
 								 </ul>
-								 <button class="model-item__btn btn btn--size-sm btn--view-pseudo">Заказать</button>
+								 <button class="model-item__btn btn btn--size-sm btn--view-pseudo js-open-popup">Заказать</button>
 							</li>
 						</ul>						
 					</div>
@@ -487,39 +487,42 @@
 			<div class="services__inner">
 				<h2 class="headline services__headline">Услуги</h2>
 				<ul class="services__list">
-					<li class="services__item">
+					<li class="services__item" data-screen="Экран - Услуги - Производство RFID брелоков с Вашим лого или информацией">
 						<span class="services__num">1</span>
 						<p class="services__name">Производство RFID брелоков
  с Вашим лого илиинформацией</p>
-						<button class="btn btn--size-sm btn--view-pseudo">Заказать</button>
+						<button class="btn btn--size-sm btn--view-pseudo js-open-popup">Заказать</button>
 					</li>
-					<li class="services__item">
+					<li class="services__item" data-screen="Производство RFID брелоков
+ с Вашим лого или информацией">
 						<span class="services__num">2</span>
 						<p class="services__name">Производство RFID брелоков
  с Вашим лого илиинформацией</p>
-						<button class="btn btn--size-sm btn--view-pseudo">Заказать</button>
+						<button class="btn btn--size-sm btn--view-pseudo js-open-popup">Заказать</button>
 					</li>
-					<li class="services__item">
+					<li class="services__item" data-screen="Производство RFID брелоков
+ с Вашим лого или информацией">
 						<span class="services__num">3</span>
 						<p class="services__name">Производство RFID брелоков
  с Вашим лого илиинформацией</p>
-						<button class="btn btn--size-sm btn--view-pseudo">Заказать</button>
+						<button class="btn btn--size-sm btn--view-pseudo js-open-popup">Заказать</button>
 					</li>
-					<li class="services__item">
+					<li class="services__item" data-screen="Производство RFID брелоков
+ с Вашим лого или информацией">
 						<span class="services__num">4</span>
 						<p class="services__name">Производство RFID брелоков
  с Вашим лого илиинформацией</p>
-						<button class="btn btn--size-sm btn--view-pseudo">Заказать</button>
+						<button class="btn btn--size-sm btn--view-pseudo js-open-popup">Заказать</button>
 					</li>
 				</ul>
 			</div>
 		</section>
 		<!-- TODO: Переделать этот блок с целью защиты от выхода контента за границы фона -->
-		<section class="sale">
+		<section class="sale" data-screen="Экран - Акция">
 			<div class="sale__inner">
 				<h2 class="sale__headline">Акция</h2>
 				<p class="sale__text">Мы сами разработаем Вам дизайн и доставим бесплатно по России и странам СНГ<br> при заказе от  1000 штук</p>
-				<button class="btn btn--size-md btn--view-pseudo">Заказать</button>
+				<button class="btn btn--size-md btn--view-pseudo js-open-popup">Заказать</button>
 			</div>
 		</section>
 		<!-- req - requirements - требования -->
@@ -593,6 +596,21 @@
 			</ul>
 		</div>
 	</footer>
+	<div class="popup popup--closed">
+		<div class="popup__content">
+			<h2 class="popup__headline headline">Звоните по номеру<br> <i>+8 (800) 000 00 00</i> <br>или оставьте наши контакты</h2>
+			<p class="popup__descr">Чтобы узнать детали Вы можете оставить  свои контактные данные  наш менеджер свяжется с вами втечении <i>4</i> минут  <i>43</i> секунд.</p>
+			<form action="#" class="popup__form">
+				<input type="text" class="popup__input input input--size-full" placeholder="Представьтесь пожалуйста*">
+				<input type="tel" class="popup__input input input--size-full" placeholder="Ваш телефон*">
+				<input type="text" class="popup__input input input--size-full" placeholder="Название компании">
+				<input type="email" class="popup__input input input--size-full" placeholder="E-mail*">
+				<input type="hidden" class="popup__input" value="Обычная заявка">
+				<button class="popup__send-btn btn btn--size-md btn--view-action" type="submit">Заказать звонок</button>
+			</form>
+			<button class="popup__close-btn" title="Закрыть окно обратной связи"></button>
+		</div>
+	</div>
 	
 	<script src="js/jquery.min.js"></script>
 	<script src="js/slick.min.js"></script>
