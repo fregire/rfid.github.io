@@ -742,11 +742,11 @@ html {
 }
 .scroll-bar__slider {
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 50%;
-  -webkit-transform: translate(-50%, 15px);
-      -ms-transform: translate(-50%, 15px);
-          transform: translate(-50%, 15px);
+  -webkit-transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
   width: 30px;
   height: 30px;
   background: url(../img/dot_icon.png) no-repeat center center;

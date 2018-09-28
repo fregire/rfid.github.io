@@ -64,32 +64,20 @@ $(document).ready(function(){
 		var sliderArrowHeight = document.querySelector(".scroll-bar__arrow--top").clientHeight;
 		var amountSliderArrows = 2;
 		var sliderControl = document.querySelector(".scroll-bar__slider");
-		var shiftCoords, coordY, directionCoord, oldCoordY, shiftTicCoord = 0;
+		var shiftCoords = 0, coordY, directionCoord, oldCoordY, shiftTicCoord = 0;
 		var textBlock = document.querySelector(".adv-text__text");
 		var visualBlock = document.querySelector(".adv-text__content");
 
 		var HIDDEN_TEXT_HEIGHT = textBlock.clientHeight;
 		var SLIDER_BAR_HEIGHT = sliderBar.clientHeight - (amountSliderArrows * sliderArrowHeight);
 		var SLIDER_HEIGHT = sliderControl.clientHeight;
-		var MAX_COORD_Y = sliderBar.clientHeight - sliderArrowHeight - SLIDER_HEIGHT;
-		var MIN_COORD_Y = sliderArrowHeight;
+		var MAX_COORD_Y = sliderBar.clientHeight - sliderArrowHeight * 2 - SLIDER_HEIGHT;
+		var MIN_COORD_Y = 0;
 		var oneTransformTic = HIDDEN_TEXT_HEIGHT / SLIDER_BAR_HEIGHT;
 
 		var onSliderControlMouseMove = function(e){
 			// Перемещение текста 
 			directionCoord = e.clientY - oldCoordY;
-			if(directionCoord < 0){
-				shiftTicCoord = shiftTicCoord + oneTransformTic;
-			} else {
-				shiftTicCoord = shiftTicCoord - oneTransformTic;
-			}
-			if(textBlock.getBoundingClientRect().bottom <= visualBlock.getBoundingClientRect().bottom + 10){
-				shiftTicCoord = -(HIDDEN_TEXT_HEIGHT - visualBlock.clientHeight);
-			} else if(shiftTicCoord >= 0){
-				shiftTicCoord = 0;
-			}
-
-			textBlock.style.transform = "translateY(" + shiftTicCoord + "px)";
 
 			// Перемещение слайдера
 			shiftCoords = e.clientY - sliderBar.getBoundingClientRect().top - (SLIDER_HEIGHT / 2);
@@ -99,6 +87,10 @@ $(document).ready(function(){
 			} else if(shiftCoords <= MIN_COORD_Y){
 				shiftCoords = MIN_COORD_Y;
 			}
+
+			// Перемещение текста
+			shiftTicCoord = -(shiftCoords * oneTransformTic);
+			textBlock.style.transform = "translateY(" + shiftTicCoord + "px)";
 
 			sliderControl.style.transform = "translate(-50%," + shiftCoords + "px)";
 			oldCoordY = e.clientY;
@@ -115,8 +107,31 @@ $(document).ready(function(){
 			document.addEventListener("mouseup", onSliderControlMouseUp);
 		}
 
-
-
 		sliderControl.addEventListener("mousedown", onSliderControlMouseDown);
+
+		var onScrollArrowsClick = function(e){
+			if(e.target.classList.contains("scroll-bar__arrow--bottom")){
+				shiftCoords++;
+			} else if(e.target.classList.contains("scroll-bar__arrow--top")){
+				shiftCoords--;
+			}
+
+			if(shiftCoords >= MAX_COORD_Y - 5){
+				shiftCoords = MAX_COORD_Y - 5;
+			} else if(shiftCoords <= MIN_COORD_Y){
+				shiftCoords = MIN_COORD_Y;
+			}
+
+
+			shiftTicCoord = -(shiftCoords * oneTransformTic);
+			textBlock.style.transform = "translateY(" + shiftTicCoord + "px)";
+
+			sliderControl.style.transform = "translate(-50%," + shiftCoords + "px)";
+		}
+
+		var scrollArrows = document.querySelectorAll(".scroll-bar__arrow");
+		for(var i = 0; i < scrollArrows.length; i++){
+			scrollArrows[i].addEventListener("click", onScrollArrowsClick);
+		}
 	})();
 });
