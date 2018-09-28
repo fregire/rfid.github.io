@@ -141,6 +141,8 @@ $(document).ready(function(){
 		}
 	})();
 
+
+	// Попап окно
 	$(".popup__close-btn").click(function(){
 		$(".popup").fadeOut();
 	});
@@ -149,5 +151,13 @@ $(document).ready(function(){
 		$(".popup").fadeIn();
 		var screenName = $(this).closest("[data-screen]").attr("data-screen") || "Обычная заявка";
 		$(".popup__input[type='hidden']").val(screenName);
+	});
+
+	// Появление блока с акцией
+	$(".sale").addClass("sale--hidden");
+	$(window).scroll(function(){
+		if(isVisible(document.querySelector(".sale"))){
+			$('.sale').removeClass("sale--hidden");
+		}
 	});
 });

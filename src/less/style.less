@@ -1274,10 +1274,18 @@ html {
 
 /* Block - sale */
 .sale {
+  position: relative;
+
   color: #fff;
   text-align: center;
 
   background: url(../img/sale_bg.png) no-repeat 0 center;
+
+  transition: transform 1s ease-in;
+}
+
+.sale--hidden { 
+  transform: translateX(-100%);
 }
 
 .sale__inner {
