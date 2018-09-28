@@ -80,6 +80,7 @@ $(document).ready(function(){
 		var MAX_COORD_Y = sliderBar.clientHeight - sliderArrowHeight * 2 - SLIDER_HEIGHT;
 		var MIN_COORD_Y = 0;
 		var oneTransformTic = HIDDEN_TEXT_HEIGHT / SLIDER_BAR_HEIGHT;
+		var MOUSE_WHEEL_SPEED = 5;
 
 		var onSliderControlMouseMove = function(e){
 			// Перемещение текста 
@@ -139,6 +140,31 @@ $(document).ready(function(){
 		for(var i = 0; i < scrollArrows.length; i++){
 			scrollArrows[i].addEventListener("click", onScrollArrowsClick);
 		}
+
+		//TODO: Сделать при наведении на видимый блок обработчик
+		var onVisualTextMouseWheel = function(e){
+			var delta = e.deltaY || e.detail || e.wheelDelta;
+			e.preventDefault ? e.preventDefault() : (e.returnValue = false);
+			console.log(delta);
+			if(delta <= 0){
+				shiftCoords = shiftCoords - MOUSE_WHEEL_SPEED;
+			} else {
+				shiftCoords = shiftCoords + MOUSE_WHEEL_SPEED;
+			}
+
+			if(shiftCoords >= MAX_COORD_Y - 5){
+				shiftCoords = MAX_COORD_Y - 5;
+			} else if(shiftCoords <= MIN_COORD_Y){
+				shiftCoords = MIN_COORD_Y;
+			}
+
+			shiftTicCoord = -(shiftCoords * oneTransformTic);
+			textBlock.style.transform = "translateY(" + shiftTicCoord + "px)";
+
+			sliderControl.style.transform = "translate(-50%," + shiftCoords + "px)";
+		}
+
+		textBlock.addEventListener("mousewheel", onVisualTextMouseWheel);
 	})();
 
 
