@@ -59,6 +59,10 @@ $(document).ready(function(){
 		$(".shape__main-slider").slick("slickGoTo", parseInt(index));
 	});
 
+	$(".applying__expand-btn").click(function(){
+		$(this).parent().toggleClass("applying__content--hidden");
+	});
+
 	(function(){
 		var sliderBar = document.querySelector(".scroll-bar");
 		var sliderArrowHeight = document.querySelector(".scroll-bar__arrow--top").clientHeight;

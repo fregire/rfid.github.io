@@ -1216,13 +1216,19 @@ html {
 /* JavaScript */
 .applying__content {
   position: relative;
-  max-height: 280px;
+  max-height: 2000px;
   overflow: hidden;
+  -webkit-transition: max-height 0.4s;
+  -o-transition: max-height 0.4s;
+  transition: max-height 0.4s;
 }
 .applying__content:after {
   position: absolute;
   bottom: 0;
   left: 0;
+  -webkit-transform: translateX(300px);
+      -ms-transform: translateX(300px);
+          transform: translateX(300px);
   display: block;
   content: "";
   height: 100px;
@@ -1231,6 +1237,19 @@ html {
   background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
   background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
+  opacity: 0;
+  -webkit-transition: opacity .4s;
+  -o-transition: opacity .4s;
+  transition: opacity .4s;
+}
+.applying__content--hidden {
+  max-height: 280px;
+}
+.applying__content--hidden:after {
+  -webkit-transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
+  opacity: 1;
 }
 .adv-text__content {
   position: relative;
