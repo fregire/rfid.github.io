@@ -259,6 +259,7 @@ html {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style: none;
+  overflow: hidden;
 }
 .projects__item {
   border: 2px solid #E5E5E5;
