@@ -1088,16 +1088,16 @@ html {
   position: relative;
   color: #fff;
   text-align: center;
-  -webkit-transition: -webkit-transform 0.4s ease-in;
-  transition: -webkit-transform 0.4s ease-in;
-  -o-transition: transform 0.4s ease-in;
-  transition: transform 0.4s ease-in;
-  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+  -webkit-transition: -webkit-transform .8s;
+  transition: -webkit-transform .8s;
+  -o-transition: transform .8s;
+  transition: transform .8s;
+  transition: transform .8s, -webkit-transform .8s;
 }
 .sale--hidden {
-  -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-          transform: translateX(-100%);
+  -webkit-transform: translateX(-10000px);
+      -ms-transform: translateX(-10000px);
+          transform: translateX(-10000px);
 }
 .sale__inner {
   max-width: 460px;
