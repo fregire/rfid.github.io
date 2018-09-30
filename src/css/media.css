@@ -1,0 +1,102 @@
+@media screen and (max-width: 1024px) {
+  .page-header {
+    -ms-background-position-x: 130%;
+    background-position-x: 130%;
+  }
+  .page-header__brelok {
+    right: 10%;
+  }
+  .page-header__wave-part {
+    -webkit-transform: translateX(20%);
+        -ms-transform: translateX(20%);
+            transform: translateX(20%);
+  }
+}
+@media screen and (max-width: 800px) {
+  .page-header {
+    -ms-background-position-x: 300%;
+    background-position-x: 300%;
+  }
+  .page-header__brelok {
+    width: 300px;
+    top: 264px;
+  }
+  .page-header__wave-part {
+    -webkit-transform: translateX(43%);
+        -ms-transform: translateX(43%);
+            transform: translateX(43%);
+  }
+  .page-header__content {
+    max-width: 50%;
+  }
+}
+@media screen and (max-width: 764px) {
+  .page-header {
+    background-size: 89%;
+  }
+  .page-header__wave-part,
+  .page-header__brelok {
+    display: none;
+  }
+  .page-header__content {
+    max-width: 400px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .page-header {
+    text-align: center;
+    background: url(../img/header_bg-mobile.png) no-repeat;
+    background-size: 100%;
+    -ms-background-position-y: 30px;
+    background-position-y: 30px;
+  }
+  .page-header__wave-part,
+  .page-header__brelok {
+    display: block;
+  }
+  .page-header__brelok {
+    top: 9.5%;
+    right: 70px;
+    width: 200px;
+  }
+  .page-header__wave-part {
+    top: 16.6%;
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+    display: block;
+    width: 150px;
+    background-image: url(../img/header_wave-mobile.png);
+    -ms-background-position-y: top;
+    background-position-y: top;
+  }
+  .page-header__inner {
+    padding-top: 15px;
+  }
+  .page-header__top-content {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .page-header__content {
+    margin-top: 130px;
+  }
+  .page-header__logo {
+    width: 70px;
+  }
+  .page-header__headline {
+    max-width: 242px;
+    margin: 0 auto;
+    font-size: 2.5rem;
+  }
+  .page-header__phone {
+    display: none;
+  }
+  .page-header__phone--hidden {
+    display: inline-block;
+    margin-top: 20px;
+    border-color: #000;
+  }
+  .page-header__phone--hidden .phone {
+    color: #000;
+  }
+}
