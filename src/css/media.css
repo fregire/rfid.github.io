@@ -1,10 +1,33 @@
+@media screen and (max-width: 1170px) {
+  /* Block - projects */
+  .projects__headline {
+    padding: 0;
+  }
+  .projects__item {
+    margin-bottom: 20px;
+  }
+  .projects__list {
+    padding-left: 20px;
+  }
+}
 @media screen and (max-width: 1024px) {
+  /* Block - page-header */
   .page-header__bg {
     right: -10%;
     width: 50%;
   }
   .page-header__brelok {
     width: 300px;
+  }
+  /* Block - projects */
+  .projects__item:last-child {
+    display: none;
+  }
+}
+@media screen and (max-width: 846px) {
+  /* Block - projects */
+  .projects__item:nth-child(3) {
+    display: none;
   }
 }
 @media screen and (max-width: 800px) {
@@ -17,6 +40,13 @@
   }
 }
 @media screen and (max-width: 600px) {
+  /* Block - projects */
+  .projects__list {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  /* Block - page-header */
   .page-header__bg {
     width: 100%;
   }
@@ -25,6 +55,46 @@
   }
 }
 @media screen and (max-width: 425px) {
+  /* Block - projects */
+  .projects {
+    background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#000));
+    background: -webkit-linear-gradient(left, #e6e6e6 0%, #000 100%);
+    background: -o-linear-gradient(left, #e6e6e6 0%, #000 100%);
+    background: linear-gradient(to right, #e6e6e6 0%, #000 100%);
+  }
+  .projects__inner {
+    display: block;
+  }
+  .projects__headline {
+    width: 100%;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+  }
+  .projects__number {
+    display: inline-block;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .projects__list {
+    width: 100%;
+    padding-left: 0;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .projects__item {
+    width: 46%;
+    margin: 0;
+    min-height: 67px;
+    background: #fff;
+  }
+  .projects__item div {
+    width: 100%;
+  }
+  /* Block - page-header */
   .page-header {
     text-align: center;
   }

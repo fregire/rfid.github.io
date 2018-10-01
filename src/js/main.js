@@ -15,6 +15,7 @@ $(document).ready(function(){
 		fade: true,
 		autoplay: true,
   		autoplaySpeed: 5000,
+  		arrows: false
 	});
 
 	// Параллакс - эффект на блоке с Производством и поставкой
