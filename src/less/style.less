@@ -357,24 +357,38 @@ html {
   max-width: 470px;
   margin-left: auto;
   margin-right: 80px;
-  max-height: 2000px;
-}
-
-.production__content--hidden:after {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-
-  width: 100%;
-  height: 56px;
-  display: none;
-  content: "";
-
-  background: linear-gradient(to top, #fff 0%, rgba(255, 255, 255, 0) 100%);
 }
 
 .production__headline {
   max-width: 300px;
+}
+
+.production__text {
+  max-height: 2000px;
+
+  transition: max-height .4s;
+}
+
+
+.production__text--hidden {
+  position: relative;
+
+  max-height: 190px;
+
+  overflow: hidden;
+}
+
+.production__text--hidden:after {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+
+  height: 50px;
+  width: 100%;
+  display: none;
+  content: "";
+
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 100%);
 }
 
 .production__text p:first-child {
@@ -1644,23 +1658,3 @@ html {
   background: url(../img/adv-text_gradient.png) no-repeat 0 -10%;
 }
 
-.production__text--hidden {
-  position: relative;
-
-  max-height: 150px;
-
-  overflow: hidden;
-}
-
-.production__text--hidden:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-
-  height: 80px;
-  width: 100%;
-  display: block;
-  content: "";
-
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 75%, #fff 100%);
-}

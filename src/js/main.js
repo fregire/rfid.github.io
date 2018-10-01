@@ -230,4 +230,9 @@ $(document).ready(function(){
 			$('.sale').removeClass("sale--hidden");
 		}
 	});
+
+	// Открытие/закрытие блока с текстом Производство и поставка...
+	$(".production__text").click(function(){
+		$(this).toggleClass("production__text--hidden")
+	});
 });

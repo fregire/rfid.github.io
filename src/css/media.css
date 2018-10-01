@@ -203,11 +203,7 @@
   .production__content {
     max-width: 210px;
   }
-  .production__content--hidden {
-    max-height: 310px;
-    overflow: hidden;
-  }
-  .production__content--hidden:after {
+  .production__text--hidden:after {
     display: block;
   }
   /* Block - features */
@@ -281,7 +277,7 @@
     max-width: 300px;
   }
   .works__show-more {
-    display: block;
+    display: inline-block;
   }
 }
 @media screen and (max-width: 370px) {
