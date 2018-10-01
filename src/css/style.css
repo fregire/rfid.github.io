@@ -836,17 +836,20 @@ html {
 .shape__content p {
   margin: 0;
 }
-.shape__btn {
+.shape__content-btn {
   margin-top: 28px;
   background: transparent url(../img/btn_gradient.svg) no-repeat center center;
   background-size: 100%;
   border: 0;
 }
+.shape__action-btn {
+  display: none;
+}
 .shape__view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin: 50px -60px;
+  margin: 50px 0;
 }
 .shape__main-view {
   -webkit-box-flex: 1;

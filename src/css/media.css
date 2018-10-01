@@ -82,6 +82,10 @@
   .features__item:nth-child(3) {
     left: 0;
   }
+  /* Block - shape */
+  .shape__item {
+    width: 33%;
+  }
 }
 @media screen and (max-width: 600px) {
   /* Block - projects */
@@ -96,6 +100,14 @@
   }
   .page-header__brelok {
     display: none;
+  }
+  /* Block - shape */
+  .shape__list {
+    display: none;
+  }
+  .shape__main-slider {
+    max-width: 300px;
+    background-size: 90%;
   }
 }
 @media screen and (max-width: 425px) {
@@ -282,6 +294,17 @@
   /* Block - popup */
   .popup__content {
     padding: 30px;
+  }
+  /* Block - shape */
+  .shape__content {
+    text-align: center;
+  }
+  .shape__content-btn {
+    display: none;
+  }
+  .shape__btn-action {
+    display: block;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 370px) {
