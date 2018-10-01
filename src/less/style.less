@@ -179,34 +179,45 @@ html {
   position: relative;
   width: 100%;
 
-  background: url(../img/header_bg_blue_wave.png) no-repeat top right;
+  //background: url(../img/header_bg_blue_wave.png) no-repeat top right;
 
   overflow: hidden;
 
 }
 
-.page-header__wave-part {
+.page-header__bg {
   position: absolute;
+  top: 0;
+  right: 0;
+}
 
-  height: 100%;
-  max-height: 500px;
+.page-header__bg-img {
+  display: block;
+  width: 100%;
 }
 
 .page-header__wave-part {
-  width: 385px;
-  top: 0;
+  position: absolute;
+  bottom: -19.8%;
   right: 0;
 
-  background: url(../img/header_bg_2.png) no-repeat 0 bottom;
-  -webkit-background-size: 100%;
-  background-size: 100%;
+  // height: 100%;
+  // max-height: 500px;
+}
+
+.page-header__wave-part {
+  width: 56.5%;
+
+  // background: url(../img/header_bg_2.png) no-repeat 0 bottom;
+  // -webkit-background-size: 100%;
+  // background-size: 100%;
 
 }
 
 .page-header__brelok {
   position: absolute;
-  top: 214.5px;
-  right: 200px;
+  bottom: 0;
+  right: 34%;
   transform: translateX(500%);
   
   transition: transform 1s;
@@ -214,6 +225,12 @@ html {
 
 .page-header__brelok--visible {
   transform: translateX(0);
+}
+
+.page-header__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
 .page-header__inner {

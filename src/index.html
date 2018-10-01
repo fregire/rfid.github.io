@@ -15,8 +15,17 @@
 </head>
 <body class="page">
 	<header class="page-header" data-screen="Первый экран на сайте">
-		<img src="img/example.png" alt="" class="page-header__brelok">
-		<div class="page-header__wave-part"></div>
+		<div class="page-header__bg">
+			<picture>
+				<source media="(max-width: 425px)" srcset="img/header_bg-mobile.png">
+				<img src="img/header_bg_blue_wave.png" alt="" class="page-header__bg-img">
+			</picture>
+			<img src="img/example.png" alt="" class="page-header__brelok">
+			<picture>
+				<source media="(max-width: 425px)" srcset="img/header_wave-mobile.png">
+				<img src="img/header_bg_2.png" alt="" class="page-header__wave-part">	
+			</picture>		
+		</div>
 		<div class="page-header__inner">
 			<div class="page-header__top-content">
 				<a href="#" class="page-header__logo logo">

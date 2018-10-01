@@ -142,25 +142,29 @@ html {
 .page-header {
   position: relative;
   width: 100%;
-  background: url(../img/header_bg_blue_wave.png) no-repeat top right;
   overflow: hidden;
+}
+.page-header__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.page-header__bg-img {
+  display: block;
+  width: 100%;
 }
 .page-header__wave-part {
   position: absolute;
-  height: 100%;
-  max-height: 500px;
+  bottom: -19.8%;
+  right: 0;
 }
 .page-header__wave-part {
-  width: 385px;
-  top: 0;
-  right: 0;
-  background: url(../img/header_bg_2.png) no-repeat 0 bottom;
-  background-size: 100%;
+  width: 56.5%;
 }
 .page-header__brelok {
   position: absolute;
-  top: 214.5px;
-  right: 200px;
+  bottom: 0;
+  right: 34%;
   -webkit-transform: translateX(500%);
       -ms-transform: translateX(500%);
           transform: translateX(500%);
@@ -174,6 +178,11 @@ html {
   -webkit-transform: translateX(0);
       -ms-transform: translateX(0);
           transform: translateX(0);
+}
+.page-header__bg {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 .page-header__inner {
   position: relative;
