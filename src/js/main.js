@@ -24,11 +24,11 @@ $(document).ready(function(){
 	var startedPosXOfBg = -200;
 	var coords;
 
-	$(window).scroll(function(e){
-		yPos = $(window).scrollTop() /  speed;
-		var coords = -yPos + startedPosXOfBg + 'px';
-		$(".production").css({ backgroundPositionY: coords });
-	});
+	// $(window).scroll(function(e){
+	// 	yPos = $(window).scrollTop() /  speed;
+	// 	var coords = -yPos + startedPosXOfBg + 'px';
+	// 	$(".production").css({ backgroundPositionY: coords });
+	// });
 
 	// Поочередное появление преимуществ
 	// Прогрессивное улучшение 
