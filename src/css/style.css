@@ -542,6 +542,14 @@ html {
 .works__arrow.slider-arrow--next {
   right: -15px;
 }
+.works__show-more {
+  display: none;
+  padding-bottom: 40px;
+  font-size: 18px;
+  color: #515151;
+  background: transparent url(../img/works-more_icon.png) no-repeat center bottom;
+  border: 0;
+}
 /* Block - slider-arrow */
 .slider-arrow {
   width: 37px;

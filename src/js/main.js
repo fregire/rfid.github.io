@@ -24,11 +24,11 @@ $(document).ready(function(){
 	var startedPosXOfBg = -200;
 	var coords;
 
-	// $(window).scroll(function(e){
-	// 	yPos = $(window).scrollTop() /  speed;
-	// 	var coords = -yPos + startedPosXOfBg + 'px';
-	// 	$(".production").css({ backgroundPositionY: coords });
-	// });
+	$(window).scroll(function(e){
+		yPos = $(window).scrollTop() /  speed;
+		var coords = -yPos + startedPosXOfBg + 'px';
+		$(".production").css({ backgroundPositionY: coords });
+	});
 
 	// Поочередное появление преимуществ
 	// Прогрессивное улучшение 
@@ -43,10 +43,53 @@ $(document).ready(function(){
 	});
 
 	// Слайдер с работами(брелками)
-	$(".works__list").slick({
+
+	var $slick_slider = $(".works__list");
+	var settings = {
 		slidesToShow: 6,
 		prevArrow: "<button class='works__arrow slider-arrow slider-arrow--prev' title='Предыдущие работы'></button>",
 		nextArrow: "<button class='works__arrow slider-arrow slider-arrow--next' title='Следующие работы'></button>",
+		responsive: [
+					    {
+					      breakpoint: 1050,
+					      settings: {
+					        slidesToShow: 4
+					      }
+					    },
+					    {
+					      breakpoint: 800,
+					      settings: {
+					        slidesToShow: 3
+					     }
+					    },
+					    {
+					      breakpoint: 570,
+					      settings: {
+					        slidesToShow: 2
+					     }
+					    },
+					    {
+					      breakpoint: 426,
+					      settings: "unslick"
+					    }
+					    
+					    // You can unslick at a given breakpoint now by adding:
+					    // settings: "unslick"
+					    // instead of a settings object
+				  ]
+	};
+	$slick_slider.slick(settings);
+	$(window).on('resize', function() {
+	    if ($(window).width() < 426) {
+	      if ($slick_slider.hasClass('slick-initialized')) {
+	        $slick_slider.slick('unslick');
+	      }
+	      return
+	    }
+
+	    if (!$slick_slider.hasClass('slick-initialized')) {
+	      return $slick_slider.slick(settings);
+	    }
 	});
 	// Слайдер с формами брелков
 	$(".shape__main-slider").slick({

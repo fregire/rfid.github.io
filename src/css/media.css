@@ -239,6 +239,50 @@
             order: -1;
     margin: 10px 0;
   }
+  /* Block - works */
+  .works {
+    position: relative;
+    text-align: center;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4883bd), to(#60b0ce));
+    background: -webkit-linear-gradient(top, #4883bd 0%, #60b0ce 100%);
+    background: -o-linear-gradient(top, #4883bd 0%, #60b0ce 100%);
+    background: linear-gradient(to bottom, #4883bd 0%, #60b0ce 100%);
+    overflow: hidden;
+  }
+  .works:after {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    display: block;
+    content: "";
+    width: 500px;
+    height: 200px;
+    border-radius: 50%;
+    background: #fff;
+    -webkit-transform: translate(-50%, 50%);
+        -ms-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
+    z-index: 0;
+  }
+  .works__inner {
+    position: relative;
+    z-index: 1;
+  }
+  .works__items-group {
+    display: block;
+    width: 100%;
+    padding: 0;
+  }
+  .works__item {
+    height: 234px;
+    margin-bottom: 10px;
+  }
+  .works__item-icon {
+    max-width: 300px;
+  }
+  .works__show-more {
+    display: block;
+  }
 }
 @media screen and (max-width: 370px) {
   /* Block - page-header */

@@ -279,7 +279,61 @@
 		order: -1;
 		margin: 10px 0;
 	}
+	
+	/* Block - works */
+	.works {
+		position: relative;
 
+		text-align: center;
+
+		background: linear-gradient(to bottom, #4883bd 0%, #60b0ce 100%);
+
+		overflow: hidden;
+	}
+
+	.works:after {
+		position: absolute;
+		bottom: 50px;
+		left: 50%;
+
+		display: block;
+		content: "";
+		width: 500px;
+		height: 200px;
+
+		border-radius: 50%;
+		background: #fff;
+
+		transform: translate(-50%, 50%);
+
+		z-index: 0;
+
+	}
+
+	.works__inner {
+		position: relative;
+
+		z-index: 1;
+	}
+
+	.works__items-group {
+		display: block;
+		width: 100%;
+		padding: 0;
+	}
+
+	.works__item {
+		height: 234px;
+		margin-bottom: 10px;
+	}
+
+	.works__item-icon {
+		max-width: 300px;
+	}
+
+	.works__show-more {
+		display: block;
+	}
 }
 
 @media screen and (max-width: @mobileScreenS){
