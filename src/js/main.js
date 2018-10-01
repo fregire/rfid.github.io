@@ -215,12 +215,14 @@ $(document).ready(function(){
 	// Попап окно
 	$(".popup__close-btn").click(function(){
 		$(".popup").fadeOut();
+		$("html").removeClass("popup-opened")
 	});
 
 	$(".js-open-popup").click(function(){
 		$(".popup").fadeIn();
 		var screenName = $(this).closest("[data-screen]").attr("data-screen") || "Обычная заявка";
 		$(".popup__input[type='hidden']").val(screenName);
+		$("html").addClass("popup-opened");
 	});
 
 	// Появление блока с акцией

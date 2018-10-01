@@ -279,6 +279,10 @@
   .works__show-more {
     display: inline-block;
   }
+  /* Block - popup */
+  .popup__content {
+    padding: 30px;
+  }
 }
 @media screen and (max-width: 370px) {
   /* Block - page-header */

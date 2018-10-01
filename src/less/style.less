@@ -16,6 +16,12 @@ html {
   font-size: 62.5%;
 }
 
+.popup-opened {
+  overflow: hidden;
+  width: 100%;
+  width: 100vw;
+}
+
 .page {
 	position: relative;
 
@@ -1531,9 +1537,9 @@ html {
   left: 0;
 
   width: 100%;
-  height: 100%;
+  min-height: 100%;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding: 15px;
 
   background: rgba(0, 0, 0, .68);
@@ -1553,8 +1559,6 @@ html {
 
 .popup__content {
   position: relative;
-  top: 50%;
-  transform: translateY(-50%);
 
   max-width: 430px;
   margin: 0 auto;
