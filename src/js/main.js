@@ -116,7 +116,7 @@ $(document).ready(function(){
 		var sliderControl = document.querySelector(".scroll-bar__slider");
 		var shiftCoords = 0, coordY, directionCoord, oldCoordY, shiftTicCoord = 0;
 		var textBlock = document.querySelector(".adv-text__text");
-		var visualBlock = document.querySelector(".adv-text__content");
+		var visualBlock = document.querySelector(".adv-text__content--hidden");
 
 		var HIDDEN_TEXT_HEIGHT = textBlock.clientHeight;
 		var SLIDER_BAR_HEIGHT = sliderBar.clientHeight - (amountSliderArrows * sliderArrowHeight);

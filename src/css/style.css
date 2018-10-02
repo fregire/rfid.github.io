@@ -739,8 +739,8 @@ html {
 }
 /* Block - adv-text */
 .adv-text {
-  background: url(../img/adv-text_bg.png) no-repeat left center;
-  background-size: 70%;
+  background: url(../img/adv-text_bg.png) no-repeat left 70%;
+  background-size: 1000px;
 }
 .adv-text__inner {
   position: relative;
@@ -755,8 +755,26 @@ html {
 }
 .adv-text__content {
   padding-bottom: 10px;
-  max-height: 155px;
+  max-height: 2000px;
   overflow: hidden;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+.adv-text__content--hidden {
+  position: relative;
+  max-height: 156px;
+  z-index: 10;
+}
+.adv-text__content--hidden:after {
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  height: 80px;
+  width: 100%;
+  display: block;
+  content: "";
+  background: url(../img/adv-text_gradient.png) no-repeat 0 -10%;
 }
 .adv-text__headline,
 .adv-text__text {
@@ -779,8 +797,12 @@ html {
 }
 .adv-text__card {
   position: absolute;
-  top: 0;
+  top: 45%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
   right: 20px;
+  max-width: 60%;
   z-index: 9;
 }
 /* Block - scroll-bar */
@@ -838,7 +860,7 @@ html {
 }
 /* Block - shape */
 .shape {
-  margin-top: -130px;
+  margin-top: -100px;
 }
 .shape__inner {
   max-width: 1030px;
@@ -1112,7 +1134,7 @@ html {
 }
 .services__list {
   padding: 0;
-  margin: 30px -20px 0;
+  margin: 30px -15px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1124,7 +1146,7 @@ html {
   position: relative;
   width: 260px;
   padding: 40px 20px 24px;
-  margin: 0 23px 40px;
+  margin: 0 20px 40px;
   text-align: center;
   background: -webkit-linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
   background: -o-linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
@@ -1410,19 +1432,4 @@ html {
       -ms-transform: translateX(0);
           transform: translateX(0);
   opacity: 1;
-}
-.adv-text__content {
-  position: relative;
-  max-height: 156px;
-  z-index: 10;
-}
-.adv-text__content:after {
-  position: absolute;
-  bottom: -10px;
-  left: 0;
-  height: 80px;
-  width: 100%;
-  display: block;
-  content: "";
-  background: url(../img/adv-text_gradient.png) no-repeat 0 -10%;
 }
