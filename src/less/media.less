@@ -55,6 +55,29 @@
 	.features__item:nth-child(3) {
 		left: -15px;
 	}
+
+	/* Block - scheme */
+	.scheme__inner {
+		padding: 0 200px;
+	}
+
+	.scheme__list {
+		align-items: flex-start;
+	}
+
+	.scheme__item {
+		bottom: -225px;
+	}
+
+	.scheme__item:nth-child(4),
+	.scheme__item {
+		width: 32%;
+	}
+
+	.scheme__item:after {
+		top: -35px;
+		bottom: 0;
+	}
 }
 
 @media screen and (max-width: 846px){
@@ -108,6 +131,48 @@
 	.shape__item {
 		width: 33%;
 	}
+
+	/* Block - scheme */
+	.scheme__inner {
+		padding: 15px;
+	}
+
+	.scheme__list {
+		margin-top: 0;
+	}
+
+	.scheme__item:first-child, 
+	.scheme__item:nth-child(2),
+	.scheme__item:last-child, 
+	.scheme__item:nth-child(6) {
+		transform: translateX(0);
+	}
+
+	.scheme__item:last-child, 
+	.scheme__item:nth-child(6) {
+		padding-right: 30px;
+
+		text-align: right;
+	}
+
+	.scheme__item:last-child:after, 
+	.scheme__item:nth-child(6):after {
+		left: auto;
+		right: -10px;
+	}
+
+	.scheme__item:first-child, 
+	.scheme__item:nth-child(2) {
+		padding-left: 30px;
+
+		text-align: left;
+	}
+
+	.scheme__item:first-child:after, 
+	.scheme__item:nth-child(2):after {
+		right: auto;
+		left: -25px;
+	}
 }
 
 @media screen and (max-width: 600px){
@@ -136,6 +201,56 @@
 		background-size: 90%;
 	}
 
+	/* Block - scheme */
+	.scheme__list {
+		height: auto;
+		display: block;
+		margin: 0 auto;
+		max-width: 250px;
+	}
+
+	.scheme__list:after {
+		height: calc(100% - 50px);
+		border-bottom: 0;
+		border-right: 0;
+		border-radius: 0;
+	}
+
+	.scheme__list:before {
+		display: none;
+	}
+
+	.scheme__item,
+	.scheme__item:first-child, 
+	.scheme__item:nth-child(2), 
+	.scheme__item:last-child, 
+	.scheme__item:nth-child(6),
+	.scheme__item:nth-child(4) {
+		position: relative;
+		top: auto;
+		left: auto;
+		bottom: auto;
+
+		display: block;
+		padding-left: 30px;
+		padding-right: 0;
+		width: auto;
+
+		text-align: left;
+	}
+
+	.scheme__item:after,
+	.scheme__item:first-child:after, 
+	.scheme__item:nth-child(2):after, 
+	.scheme__item:last-child:after, 
+	.scheme__item:nth-child(6):after {
+		right: auto;
+		left: -10px;
+		top: -8px;
+		transform: none;
+
+		z-index: 10;
+	}
 }
 
 @media screen and (max-width: @mobileScreenL){
@@ -325,6 +440,8 @@
 	.works__inner {
 		position: relative;
 
+		padding-bottom: 0;
+
 		z-index: 1;
 	}
 
@@ -364,6 +481,15 @@
 	.shape__btn-action {
 		display: block;
 		margin: 0 auto;
+	}
+
+	/* Block - scheme */
+	.scheme {
+		padding-top: 0;
+	}
+	.scheme__list {
+		margin: 40px 25px 0;
+		max-width: 200px;
 	}
 }
 
