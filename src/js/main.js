@@ -237,4 +237,18 @@ $(document).ready(function(){
 	$(".production__text").click(function(){
 		$(this).toggleClass("production__text--hidden")
 	});
+
+	// Слайдер с услугами 
+	$(".services__list").slick({
+		mobileFirst: true,
+		slidesToShow: 1,
+		prevArrow: "<button class='services__arrow slider-arrow slider-arrow--prev' title='Предыдущие услуги'></button>",
+		nextArrow: "<button class='services__arrow slider-arrow slider-arrow--next' title='Следующие услуги'></button>",
+		responsive: [
+			{
+				breakpoint: 425,
+				settings: "unslick"
+			}
+		]
+	})
 });
