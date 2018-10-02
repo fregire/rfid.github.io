@@ -1152,20 +1152,45 @@ html {
 .model {
   position: relative;
 
+  width: 100%;
+  min-height: 530px;
+
   color: #fff;
   
-  background: url(../img/model_bg.png) no-repeat;
-  -webkit-background-size: 100%;
-  background-size: 100%;
+  background: linear-gradient(to right, #3988bc 0%, #5075ab 100%);
+  overflow: hidden;
+}
+
+.model:after {
+  position: absolute;
+  bottom: -300px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  display: block;
+  content: "";
+  width: 2000px;
+  height: 500px;
+
+  background: #fff;
+  border-radius: 50%;
+
+  z-index: 1;
+
 }
 
 .model__inner {
+  position: relative;
+
   max-width: 1030px;
   margin: 0 auto;
   padding: 60px 15px;
 
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+
+  z-index: 2;
 }
 
 .model__content {

@@ -956,11 +956,32 @@ html {
 /* Block - model */
 .model {
   position: relative;
+  width: 100%;
+  min-height: 530px;
   color: #fff;
-  background: url(../img/model_bg.png) no-repeat;
-  background-size: 100%;
+  background: -webkit-gradient(linear, left top, right top, from(#3988bc), to(#5075ab));
+  background: -webkit-linear-gradient(left, #3988bc 0%, #5075ab 100%);
+  background: -o-linear-gradient(left, #3988bc 0%, #5075ab 100%);
+  background: linear-gradient(to right, #3988bc 0%, #5075ab 100%);
+  overflow: hidden;
+}
+.model:after {
+  position: absolute;
+  bottom: -300px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: block;
+  content: "";
+  width: 2000px;
+  height: 500px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 1;
 }
 .model__inner {
+  position: relative;
   max-width: 1030px;
   margin: 0 auto;
   padding: 60px 15px;
@@ -970,6 +991,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  z-index: 2;
 }
 .model__content {
   -webkit-box-flex: 1;
