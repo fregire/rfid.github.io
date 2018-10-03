@@ -164,9 +164,10 @@ $(document).ready(function(){
 
 		var onScrollArrowsClick = function(e){
 			if(e.target.classList.contains("scroll-bar__arrow--bottom")){
-				shiftCoords++;
+				//shiftCoords++;
+				shiftCoords = shiftCoords + 5;
 			} else if(e.target.classList.contains("scroll-bar__arrow--top")){
-				shiftCoords--;
+				shiftCoords = shiftCoords - 5;
 			}
 
 			if(shiftCoords >= MAX_COORD_Y - 5){
@@ -252,5 +253,13 @@ $(document).ready(function(){
 				settings: "unslick"
 			}
 		]
+	});
+
+	$(".cost__shapes").slick({
+		slidesToShow: 9,
+		centerMode: true,
+		centerPadding: '0px',
+		focusOnSelect: true,
+		arrows: false
 	})
 });

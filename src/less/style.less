@@ -1057,7 +1057,9 @@ html {
   width: 30px;
   height: 30px;
 
-  background: url(../img/dot_icon.png) no-repeat center center;  
+  background: url(../img/dot_icon.png) no-repeat center center; 
+  -webkit-background-size: 30px;
+   background-size: 30px; 
 }
 
 
@@ -1675,16 +1677,130 @@ html {
   max-width: 470px;
 }
 
-.cost__form-block {
+.cost__cutomize {
+  max-width: 1300px;
+  margin: 30px auto;
+  padding: 30px 0;
+
   background: #fff;
   border-radius: 30px;
 }
 
-.cost__cutomize {
+.cost__params {
   max-width: 1150px;
   margin: 0 auto;
-  padding: 30px 15px;
+  padding: 0 15px;
 }
+
+.cost__shapes {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.cost__shapes .slick-list {
+  height: 100%;
+}
+
+.cost__shapes .slick-slide {
+  outline: none;
+}
+
+.cost__shapes .slick-current.slick-center .cost__shape-img {
+  max-height: 200px;
+}
+
+.cost__shapes .slick-current.slick-center label:after {
+  opacity: 1;
+}
+
+.cost__shapes .slick-current.slick-center .cost__shape:after {
+  display: block;
+}
+
+.cost__shape {
+  position: relative;
+
+  height: 200px;
+}
+
+.cost__shape:after {
+  position: absolute;
+  top: 0;
+  right: -26px;
+
+  display: none;
+  content: "";
+  width: 26px;
+  height: 20px;
+
+  background: url(../img/tick_icon.png) no-repeat center center;
+}
+
+.cost__shape-img:hover {
+  cursor: pointer;
+}
+
+.cost__shape label {
+  display: block;
+}
+
+.cost__shape label:after {
+  position: absolute;
+  top:  50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: block;
+  content: "";
+  width: 75px;
+  height: 75px;
+  opacity: 0;
+
+  background: transparent;
+  box-shadow: 0px 0px 100px 20px rgba(0, 0, 0, 0.14); 
+  transition: opacity .5s;
+
+  z-index: -1;
+}
+
+.cost__shape-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  margin: 0 auto;
+  max-width: 100%;
+  max-height: 100px;
+
+  transition: max-height .4s;
+}
+
+.cost__shape input[type='radio']{
+  display: none;
+}
+
+.cost__params {
+  margin-top: 30px;
+}
+
+/* Block - params */
+
+.params__group-headline,
+.params__headline {
+  color: @mainHeadlineColor;
+}
+
+.params__headline {
+  font-size: 2.2rem;
+}
+
+.params__group-headline {
+  font-size: 1.8rem;
+}
+
+/* Block - checkbox */
+
 /* Block - page-footer */
 .page-footer__inner {
   max-width: 1100px;

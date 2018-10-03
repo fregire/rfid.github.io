@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/slick.css">
-	<link rel="stylesheet" href="css/slick-theme.css">
 	<link rel="stylesheet" href="css/jquery.custom-scroll.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/media.css">
@@ -582,21 +581,70 @@
 					<h2 class="cost__headline">Чтобы узнать цену выберете брелок и заполните форму или звоните по номеру <i>8 800 000 00 00</i></h2>
 					<p class="cost__descr">Стоимость изготовления зависит от количества, вида чипа, типа персонализации и отделки.</p>					
 				</div>
-				<form action="#" class="cost__form-block">
+				<form action="#" method="GET" class="cost__form-block">
 					<div class="cost__cutomize">
 						<div class="cost__shapes">
 							<div class="cost__shape">
 								<label>
-									<img src="img/shape_example.png" alt="">
+									<img class="cost__shape-img" src="img/shape_example.png" alt="">
 									<input type="radio" value="yes" name="cost_shape">
 								</label>
 							</div>
 							<div class="cost__shape">
 								<label>
-									<img src="img/shape_example.png" alt="">
+									<img class="cost__shape-img" src="img/shape_example.png" alt="">
 									<input type="radio" value="yes" name="cost_shape">
 								</label>
 							</div>
+							<div class="cost__shape">
+								<label>
+									<img class="cost__shape-img" src="img/shape_example.png" alt="">
+									<input type="radio" value="yes" name="cost_shape">
+								</label>
+							</div>
+							<div class="cost__shape">
+								<label>
+									<img class="cost__shape-img" src="img/shape_example.png" alt="">
+									<input type="radio" value="yes" name="cost_shape">
+								</label>
+							</div>
+							<div class="cost__shape">
+								<label>
+									<img class="cost__shape-img" src="img/shape_example_2.png" alt="">
+									<input type="radio" value="good_boy" name="cost_shape">
+								</label>
+							</div>
+							<div class="cost__shape">
+								<label>
+									<img class="cost__shape-img" src="img/shape_example.png" alt="">
+									<input type="radio" value="yes" name="cost_shape">
+								</label>
+							</div>
+							<div class="cost__shape">
+								<label>
+									<img class="cost__shape-img" src="img/shape_example.png" alt="">
+									<input type="radio" value="yes" name="cost_shape">
+								</label>
+							</div>
+							<div class="cost__shape">
+								<label>
+									<img class="cost__shape-img" src="img/shape_example.png" alt="">
+									<input type="radio" value="yes" name="cost_shape">
+								</label>
+							</div>
+							<div class="cost__shape">
+								<label>
+									<img class="cost__shape-img" src="img/shape_example.png" alt="">
+									<input type="radio" value="yes" name="cost_shape">
+								</label>
+							</div>
+							<div class="cost__shape">
+								<label>
+									<img class="cost__shape-img" src="img/shape_example.png" alt="">
+									<input type="radio" value="yes" name="cost_shape">
+								</label>
+							</div>
+
 						</div>	
 						<div class="cost__params params">
 							<h3 class="params__headline">Укажите небходимые параметры чтобы мы смогли расчитать стоимость заказа.</h3>
@@ -604,7 +652,9 @@
 								<h4 class="params__group-headline">Тип чипа:</h4>
 								<div class="params__group-controls">
 									<label class="checkbox">
-										<input class="checkbox__control" type="radio" name="cheap_type">
+										<div class="checkbox__box">
+											<input class="checkbox__control-input" type="radio" name="cheap_type">
+										</div>
 										<span class="checkbox__text"></span>
 										<span class="checkbox__faq" title="Подробнее"></span>
 									</label>									
