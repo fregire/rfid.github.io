@@ -153,7 +153,7 @@ html {
 }
 
 .input:focus {
-  border-color: rgba(0, 0, 0, .3);
+  border-color: rgba(0, 0, 0, .4);
 }
 
 .input--size-md {
@@ -1649,7 +1649,7 @@ html {
 .cost__inner {
   max-width: 1330px;
   margin: 0 auto;
-  padding: 60px 15px;
+  padding: 30px 15px;
 }
 
 .cost__text {
@@ -1786,6 +1786,87 @@ html {
 
 .cost__params {
   margin-top: 30px;
+}
+
+.cost__contacts-headline {
+  margin: 0 0 30px;
+
+  color: #fff;
+  text-align: center;
+  font-weight: 400;
+}
+
+.cost__fields {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1060px;
+  margin: 0 auto;
+}
+
+.cost__fields-group {
+  min-width: 330px;
+  margin: 0 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+} 
+
+.cost__input:last-child {
+  margin-bottom: 0;
+}
+
+.cost__upload {
+  display: block;
+  height: 100%;
+}
+
+.cost__send-info {
+  position: relative;
+  left: 50%;
+  transform: translateX(-176px);
+
+  max-width: 500px;   
+  margin-top: 30px;
+}
+
+.cost__apply-btn,
+.cost__politics-text {
+  vertical-align: middle;
+}
+
+.cost__politics-text {
+  display: inline-block;
+  margin-left: 50px;
+  max-width: 265px;
+
+  color: #fff;
+  font-size: 1.2rem;
+}
+
+.cost__politics-text a {
+  color: #fff;
+}
+
+/* Block - upload-file */
+.upload-file {
+  padding: 26px 16px;
+  background: #fff url(../img/photo_icon.png) no-repeat 90% center;
+  border-radius: 5px;
+}
+
+.upload-file:hover {
+  cursor: pointer;
+}
+
+.upload-file__text {
+  display: block;
+  max-width: 200px;
+
+  font-size: 1.4rem;
+}
+
+.upload-file__input {
+  display: none;
 }
 
 /* Block - params */
