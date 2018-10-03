@@ -261,5 +261,18 @@ $(document).ready(function(){
 		centerPadding: '0px',
 		focusOnSelect: true,
 		arrows: false
+	});
+
+	// Чекбоксы для рассчета стоимости
+	$(".checkbox").not(".checkbox__more").click(function(){
+		var $checkboxInput = $(this).find(".checkbox__control")
+		var checkboxGroupName = $checkboxInput.attr("name");
+		var $checkboxesWithTheSameGroup = $(".checkbox__control[name='" + checkboxGroupName + "']");
+
+		$checkboxesWithTheSameGroup.parent().parent().removeClass("checkbox--checked");
+		$checkboxesWithTheSameGroup.prop("checked", false);
+
+		$(this).addClass("checkbox--checked");
+		$checkboxInput.prop("checked", true);
 	})
 });
