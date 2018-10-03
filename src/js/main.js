@@ -1,7 +1,7 @@
 
 $(document).ready(function(){
 	function isVisible(elem){
-		var result = elem.getBoundingClientRect().top < (screen.height - 200);
+		var result = elem.getBoundingClientRect().top < (screen.height - 100);
 		return result;
 	}
 
