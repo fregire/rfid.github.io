@@ -602,6 +602,9 @@
     margin: 0;
     padding: 10px;
   }
+  .slider-arrow {
+    overflow: hidden;
+  }
   .slider-arrow:before {
     display: none;
   }
