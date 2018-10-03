@@ -572,6 +572,8 @@ html {
       -ms-transform: translateY(-60%);
           transform: translateY(-60%);
   display: none;
+  width: 45px;
+  height: 45px;
   background: rgba(255, 255, 255, 0.6);
   background-size: 12px;
   z-index: 10;
@@ -598,14 +600,11 @@ html {
 }
 /* Block - slider-arrow */
 .slider-arrow {
-  width: 37px;
-  height: 37px;
-  border-radius: 50%;
+  width: 40px;
+  height: 40px;
   border: none;
+  border-radius: 50%;
   outline: none;
-  background-repeat: no-repeat;
-  -ms-background-position-y: center;
-  background-position-y: center;
   opacity: .8;
   -webkit-transition: opacity .2s;
   -o-transition: opacity .2s;
@@ -616,13 +615,41 @@ html {
   cursor: pointer;
   opacity: 1;
 }
-.slider-arrow--prev {
-  background-image: url(../img/slider-arrow_prev.png);
-  background-position-x: 40%;
+.slider-arrow:after,
+.slider-arrow:before {
+  position: absolute;
+  display: block;
+  content: "";
 }
-.slider-arrow--next {
-  background-image: url(../img/slider-arrow_next.png);
-  background-position-x: 60%;
+.slider-arrow:before {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  border-radius: 50%;
+  z-index: 2;
+}
+.slider-arrow:after {
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  border: 15px solid transparent;
+  -webkit-transition: opacity .2s;
+  -o-transition: opacity .2s;
+  transition: opacity .2s;
+}
+.slider-arrow--prev:after {
+  left: 10px;
+  border-right: 16px solid #5e7fb8;
+}
+.slider-arrow--next:after {
+  right: -22px;
+  border-left: 16px solid #5e7fb8;
 }
 /* Block - scheme */
 .scheme {
