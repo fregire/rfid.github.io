@@ -1321,6 +1321,55 @@ html {
   padding-left: 5px;
 }
 
+
+.applying__content {
+  position: relative;
+
+  max-height: 2000px;
+
+  overflow: hidden;
+
+  transition: max-height .4s;
+}
+
+.applying__content .applying__expand-btn {
+  transform: rotate(180deg);
+  transform-origin: 50% 50%;
+
+  transition: transform .4s;
+}
+
+.applying__content:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transform: translateX(300px);
+  
+  display: block;
+  content: "";
+  height: 100px;
+  width: 100%;
+
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 75%, #fff 100%);
+  opacity: 0;
+
+  transition: opacity .4s;
+}
+
+.applying__content--hidden {
+  max-height: 280px;
+}
+
+.applying__content--hidden .applying__expand-btn {
+  transform: rotate(0deg);
+}
+
+.applying__content--hidden:after {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+
 .applying__content:first-child {
   max-width: 480px;
 }
@@ -1336,12 +1385,28 @@ html {
 }
 
 .applying__expand-btn {
+  position: relative;
+
   width: 43px;
   height: 33px;
   margin-right: 10px;
 
   background: url(../img/expand_icon.png) no-repeat center center;
-  border: none;
+
+  border: 2px solid #4882bd;
+}
+
+.applying__expand-btn:after {
+  position: absolute;
+  top: -2px;
+  left: -2px;
+
+  display: block;
+  content: "";
+  width: 43px;
+  height: 33px;
+
+  background: linear-gradient(to right, transparent 0%, rgba(255,255,255,.3) 100%);
 }
 
 .applying__sphere-list,
@@ -2243,41 +2308,5 @@ html {
 }
 
 
-/* JavaScript */
-.applying__content {
-  position: relative;
-
-  max-height: 2000px;
-
-  overflow: hidden;
-
-  transition: max-height .4s;
-}
-
-.applying__content:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  transform: translateX(300px);
-  
-  display: block;
-  content: "";
-  height: 100px;
-  width: 100%;
-
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 75%, #fff 100%);
-  opacity: 0;
-
-  transition: opacity .4s;
-}
-
-.applying__content--hidden {
-  max-height: 280px;
-}
-
-.applying__content--hidden:after {
-  transform: translateX(0);
-  opacity: 1;
-}
 
 

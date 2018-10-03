@@ -255,6 +255,7 @@ $(document).ready(function(){
 		]
 	});
 
+	// Слайдер форм при рассчете стоимости
 	$(".cost__shapes").slick({
 		slidesToShow: 9,
 		centerMode: true,
@@ -278,7 +279,7 @@ $(document).ready(function(){
 
 	// Открытие характеристик при нажатии на форму брелка в слайдере при отправке формы 
 	$(".params").addClass("params--hidden");
-	
+
 	$(".cost__shape-img").click(function(){
 		$(".params").removeClass("params--hidden");
 	});
