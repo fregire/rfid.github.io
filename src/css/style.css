@@ -1208,6 +1208,7 @@ html {
   padding-top: 5px;
   padding-bottom: 5px;
   background: url(../img/dot_icon.png) no-repeat 0 center;
+  background-size: 30px;
 }
 /* Block - services */
 .services__inner {
