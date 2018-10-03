@@ -1,7 +1,8 @@
 
 $(document).ready(function(){
-	function isVisible(elem){
-		var result = elem.getBoundingClientRect().top < (screen.height - 100);
+	//admittance - допуск(то есть не сразу появляется элемент, как только виден, а через опр. промежуток)
+	function isVisible(elem, admittance){
+		var result = elem.getBoundingClientRect().top < (screen.height - admittance);
 		return result;
 	}
 
@@ -35,7 +36,7 @@ $(document).ready(function(){
 	$(".features__item").addClass("features__item--hidden");
 
 	$(window).scroll(function(e){
-		if(isVisible(document.querySelector(".features__list"))){
+		if(isVisible(document.querySelector(".features__list"), 200)){
 			$(".features__item").each(function(i) {
 			    $(this).delay(1000 * i).removeClass("features__item--hidden");
 			});				
@@ -228,7 +229,7 @@ $(document).ready(function(){
 	// Появление блока с акцией
 	$(".sale").addClass("sale--hidden");
 	$(window).scroll(function(){
-		if(isVisible(document.querySelector(".sale"))){
+		if(isVisible(document.querySelector(".sale"), 0)){
 			$('.sale').removeClass("sale--hidden");
 		}
 	});
