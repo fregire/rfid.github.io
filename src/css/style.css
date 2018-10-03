@@ -10,8 +10,6 @@ html {
 }
 .popup-opened {
   overflow: hidden;
-  width: 100%;
-  width: 100vw;
 }
 .page {
   position: relative;
@@ -1271,6 +1269,7 @@ html {
       -ms-transform: translateY(-50%);
           transform: translateY(-50%);
   background-color: transparent;
+  z-index: 11;
 }
 .services__arrow.slider-arrow--prev {
   left: -30px;
@@ -1493,9 +1492,7 @@ html {
   top: 0;
   left: 0;
   width: 100%;
-  min-height: 100%;
-  width: 100vw;
-  min-height: 100vh;
+  height: 100vh;
   padding: 15px;
   background: rgba(0, 0, 0, 0.68);
   overflow: auto;
@@ -1511,7 +1508,7 @@ html {
 .popup__content {
   position: relative;
   max-width: 430px;
-  margin: 0 auto;
+  margin: 0 auto 100px;
   padding: 45px;
   background: #fff;
 }
