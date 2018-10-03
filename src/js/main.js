@@ -274,5 +274,12 @@ $(document).ready(function(){
 
 		$(this).addClass("checkbox--checked");
 		$checkboxInput.prop("checked", true);
-	})
+	});
+
+	// Открытие характеристик при нажатии на форму брелка в слайдере при отправке формы 
+	$(".params").addClass("params--hidden");
+	
+	$(".cost__shape-img").click(function(){
+		$(".params").removeClass("params--hidden");
+	});
 });

@@ -1591,6 +1591,16 @@ html {
   display: none;
 }
 /* Block - params */
+.params {
+  max-height: 3000px;
+  -webkit-transition: max-height 0.8s;
+  -o-transition: max-height 0.8s;
+  transition: max-height 0.8s;
+}
+.params--hidden {
+  max-height: 0;
+  overflow: hidden;
+}
 .params__group-headline,
 .params__headline {
   color: #191919;
