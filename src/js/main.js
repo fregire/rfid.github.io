@@ -2,6 +2,7 @@
 $(document).ready(function(){
 	//admittance - допуск(то есть не сразу появляется элемент, как только виден, а через опр. промежуток)
 	function isVisible(elem, admittance){
+		admittance = admittance || 0;
 		var result = elem.getBoundingClientRect().top < (screen.height - admittance);
 		return result;
 	}
@@ -229,7 +230,7 @@ $(document).ready(function(){
 	// Появление блока с акцией
 	$(".sale").addClass("sale--hidden");
 	$(window).scroll(function(){
-		if(isVisible(document.querySelector(".sale"), 0)){
+		if(isVisible(document.querySelector(".sale"))){
 			$('.sale').removeClass("sale--hidden");
 		}
 	});
