@@ -127,6 +127,7 @@ $(document).ready(function(){
 		var MIN_COORD_Y = 0;
 		var oneTransformTic = HIDDEN_TEXT_HEIGHT / SLIDER_BAR_HEIGHT;
 		var MOUSE_WHEEL_SPEED = 5;
+		var ARROWS_PER_CLICK_SPEED = 5;
 
 		var onSliderControlMouseMove = function(e){
 			// Перемещение текста 
@@ -164,10 +165,9 @@ $(document).ready(function(){
 
 		var onScrollArrowsClick = function(e){
 			if(e.target.classList.contains("scroll-bar__arrow--bottom")){
-				//shiftCoords++;
-				shiftCoords = shiftCoords + 5;
+				shiftCoords = shiftCoords + ARROWS_PER_CLICK_SPEED;
 			} else if(e.target.classList.contains("scroll-bar__arrow--top")){
-				shiftCoords = shiftCoords - 5;
+				shiftCoords = shiftCoords - ARROWS_PER_CLICK_SPEED;
 			}
 
 			if(shiftCoords >= MAX_COORD_Y - 5){
@@ -188,8 +188,7 @@ $(document).ready(function(){
 			scrollArrows[i].addEventListener("click", onScrollArrowsClick);
 		}
 
-		//TODO: Сделать при наведении на видимый блок обработчик
-		var onVisualTextMouseWheel = function(e){
+		var onVisualBlockMouseWheel = function(e){
 			var delta = e.deltaY || e.detail || e.wheelDelta;
 			e.preventDefault ? e.preventDefault() : (e.returnValue = false);
 			console.log(delta);
@@ -211,7 +210,7 @@ $(document).ready(function(){
 			sliderControl.style.transform = "translate(-50%," + shiftCoords + "px)";
 		}
 
-		textBlock.addEventListener("mousewheel", onVisualTextMouseWheel);
+		visualBlock.addEventListener("mousewheel", onVisualBlockMouseWheel);
 	})();
 
 
