@@ -191,7 +191,7 @@ $(document).ready(function(){
 		var onVisualBlockMouseWheel = function(e){
 			var delta = e.deltaY || e.detail || e.wheelDelta;
 			e.preventDefault ? e.preventDefault() : (e.returnValue = false);
-			
+
 			if(delta <= 0){
 				shiftCoords = shiftCoords - MOUSE_WHEEL_SPEED;
 			} else {
@@ -282,4 +282,9 @@ $(document).ready(function(){
 	$(".cost__shape-img").click(function(){
 		$(".params").removeClass("params--hidden");
 	});
+
+	//Раскрытие текста Преимущества RFID брелка...
+	$(".adv-text__content").click(function(){
+		$(this).toggleClass("adv-text__content--hidden");
+	})
 });

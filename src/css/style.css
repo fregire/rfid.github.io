@@ -924,7 +924,7 @@ html {
 .shape__inner {
   max-width: 1030px;
   margin: 0 auto;
-  padding: 0 15px 80px;
+  padding: 65px 15px;
 }
 .shape__content {
   max-width: 505px;
