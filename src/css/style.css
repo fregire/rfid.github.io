@@ -1690,12 +1690,13 @@ html {
 /* Block - params */
 .params {
   max-height: 3000px;
-  -webkit-transition: max-height 0.8s;
-  -o-transition: max-height 0.8s;
-  transition: max-height 0.8s;
+  -webkit-transition: max-height 0.8s, opacity 1s;
+  -o-transition: max-height 0.8s, opacity 1s;
+  transition: max-height 0.8s, opacity 1s;
 }
 .params--hidden {
   max-height: 0;
+  opacity: 0;
   overflow: hidden;
 }
 .params__group-headline,
