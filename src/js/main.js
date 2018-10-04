@@ -191,7 +191,7 @@ $(document).ready(function(){
 		var onVisualBlockMouseWheel = function(e){
 			var delta = e.deltaY || e.detail || e.wheelDelta;
 			e.preventDefault ? e.preventDefault() : (e.returnValue = false);
-			console.log(delta);
+			
 			if(delta <= 0){
 				shiftCoords = shiftCoords - MOUSE_WHEEL_SPEED;
 			} else {
