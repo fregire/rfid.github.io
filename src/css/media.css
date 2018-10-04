@@ -436,8 +436,10 @@
   }
   /* Block - production */
   .production {
-    background-color: #fff;
-    background-position: -60% -220px;
+    background: #fff url(../img/production_bg-mobile.png) no-repeat;
+    background-position-x: right;
+    -ms-background-position-y: 0;
+    background-position-y: 0;
   }
   .production__inner {
     padding: 30px 15px;
@@ -670,10 +672,5 @@
     width: 180px;
     bottom: 25%;
     right: 25%;
-  }
-  /* Block - production */
-  .production {
-    background-color: #fff;
-    background-position-x: -45%;
   }
 }

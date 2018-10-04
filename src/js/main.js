@@ -27,6 +27,9 @@ $(document).ready(function(){
 	var coords;
 
 	$(window).scroll(function(e){
+		if($(window).width() <= 425){
+			speed = 0;
+		}
 		yPos = $(window).scrollTop() /  speed;
 		var coords = -yPos + startedPosXOfBg + 'px';
 		$(".production").css({ backgroundPositionY: coords });
