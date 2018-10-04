@@ -450,6 +450,7 @@
 
 	.page-header__inner {
 		padding-top: 15px;
+		padding: 15px 15px 30px;
 	}
 
 	.page-header__top-content {
@@ -476,10 +477,25 @@
 	}
 
 	.page-header__phone--hidden {
+		position: relative;
+
 		display: inline-block;
 		margin-top: 20px;
 
 		border-color: #000;
+	}
+
+	.page-header__phone--hidden:before {
+		position: absolute;
+		top: -2px;
+		left: -2px;
+
+		width: calc(100% + 4px);
+		height: calc(100% + 4px);
+		display: block;
+		content: "";
+
+		background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, .5) 100%);
 	}
 
 	.page-header__phone--hidden .phone {
