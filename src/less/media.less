@@ -430,6 +430,30 @@
 		width: 100%;
 		margin-bottom: 20px;
 	}
+
+	/* Block - params */
+	.params__group {
+		width: 100%;
+	}
+
+	.params__group {
+		margin-bottom: 15px;
+		padding-top: 15px;
+
+		border-top: 1px solid #c6c6c6;
+	}
+
+	.params__group:nth-child(2),
+	.params__group:nth-child(6),
+	.params__group:last-child {
+		border-top-color: transparent;
+	}
+
+	/* Delete */
+	.cost__send-info {
+		display: none;
+	}
+
 }
 
 @media screen and (max-width: @mobileScreenL){
@@ -832,6 +856,10 @@
 	}
 
 	/* Block - cost */
+
+	.cost__cutomize {
+		padding: 15px 0;
+	}
 	.cost__shapes {
 		background: url(../img/shape_slider_bg.png) no-repeat center bottom;
 		-webkit-background-size: 70%;
@@ -848,6 +876,31 @@
 	}
 
 	.cost__shape label:after {
+		display: none;
+	}
+
+
+	.cost__shape:before {
+		-ms-background-position-y: bottom;
+		background-position-y: bottom;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+	}
+
+	.cost__shape:after {
+		right: 50%;
+		transform: translateX(50px);
+
+		content: "Выбрано";
+	}
+
+	/* Block - params */
+	.params__headline {
+		font-size: 18px;
+	}
+
+	/* Block - more */
+	.more {
 		display: none;
 	}
 }
@@ -872,19 +925,5 @@
 
 	.cost__shapes .slick-current.slick-center .cost__shape-img {
 		max-height: 250px;
-	}
-
-	.cost__shape:before {
-		-ms-background-position-y: bottom;
-		background-position-y: bottom;
-		-webkit-background-size: 100%;
-		background-size: 100%;
-	}
-
-	.cost__shape:after {
-		right: 50%;
-		transform: translateX(50px);
-
-		content: "Выбрано";
 	}
 }
