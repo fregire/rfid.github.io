@@ -1650,9 +1650,9 @@ html {
 .cost__send-info {
   position: relative;
   left: 50%;
-  -webkit-transform: translateX(-176px);
-      -ms-transform: translateX(-176px);
-          transform: translateX(-176px);
+  -webkit-transform: translateX(-88px);
+      -ms-transform: translateX(-88px);
+          transform: translateX(-88px);
   max-width: 500px;
   margin-top: 30px;
 }
