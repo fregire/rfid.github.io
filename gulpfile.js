@@ -10,6 +10,9 @@ var minifycss = require("gulp-csso");
 var rename = require("gulp-rename");
 var run = require("run-sequence");
 var del = require("del");
+var rigger = require("gulp-rigger");
+var sourcemaps = require("gulp-sourcemaps");
+var minjs = require("gulp-uglify");
 
 imagemin.mozjpeg = require("imagemin-mozjpeg");
 
@@ -58,7 +61,7 @@ gulp.task("server", ["styles"], function() {
 	gulp.watch("src/*.html")
 		.on("change", server.reload);	
 
-	gulp.watch("src/js/**/*.js")
+	gulp.watch("src/js/*.js")
 		.on("change", server.reload);
 });
 
@@ -73,13 +76,23 @@ gulp.task("copy", function(){
 	return gulp.src(["src/img/**/*.{svg,jpg,jpeg,png}", "src/**/*.html"])
 		.pipe(gulp.dest("final"));
 });
+
 gulp.task("del", function(){
 	del("final");
-})
+});
+
 gulp.task("build", function(done){
 	run("del", "minifycss", "jslibs", "copy", done);
-})
+});
 
+// gulp.task("js:build", function(){
+// 	gulp.src("src/js/main.js")
+// 		.pipe(sourcemaps.init())
+// 		.pipe(rigger())
+// 		.pipe(sourcemaps.write())
+// 		.pipe(gulp.dest("src/js"))
+// 		.pipe(server.stream());
+// });
 
 
 
