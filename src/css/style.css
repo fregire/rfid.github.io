@@ -1388,6 +1388,7 @@ html {
   -o-transition: transform .8s;
   transition: transform .8s;
   transition: transform .8s, -webkit-transform .8s;
+  overflow: hidden;
 }
 .sale--hidden {
   -webkit-transform: translateX(-10000px);
