@@ -23,6 +23,20 @@
 		max-width: 50%;
 	}
 
+	/* Block -  */
+	.params__group {
+		width: 30%;
+		max-height: 100%;
+	}
+
+	.params__group--first .params__group-controls--row .params__checkbox:first-child {
+		margin-right: 70px;
+	}
+
+	.params__group-controls {
+		max-height: 100%;
+	}
+
 }
 @media screen and (max-width: @laptopScreen){
 	/* Block - page-header */
@@ -110,6 +124,11 @@
 	}
 	.page-footer__item {
 		width: 33%;
+	}
+
+	/* Block - params */
+	.params__group--middle {
+		margin: 0 30px;
 	}
 }
 
@@ -262,6 +281,37 @@
 		border-radius: 40px;
 
 		background: url(../img/present_bg-1.png) no-repeat -150px -60%, linear-gradient(20deg, #f69249 0%, #bc3e1c 100%);
+	}
+
+	/* Block - params */
+	.params__group {
+		width: 50%;
+		padding-right: 15px;
+
+		border: 0;
+	}
+
+	.params__group--middle {
+		margin: 0;
+	}
+
+	.params__checkbox {
+		margin-right: 0;
+	}
+
+
+	/* Block - more */
+	.more__text,
+	.checkbox__more-text {
+		left: -15px;
+  		bottom: 150%;
+	}
+
+	.checkbox__more-text,
+	.checkbox__more-text:after,
+	.more__text,
+	.more__text:after {
+	  transform: translateX(-50%) rotate(0deg);
 	}
 }
 
