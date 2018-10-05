@@ -1485,6 +1485,7 @@ html {
 }
 /* Block - cost */
 .cost {
+  position: relative;
   background: -webkit-gradient(linear, left top, left bottom, from(#60a1c7), to(#5c76b6));
   background: -webkit-linear-gradient(top, #60a1c7 0%, #5c76b6 100%);
   background: -o-linear-gradient(top, #60a1c7 0%, #5c76b6 100%);
@@ -1705,6 +1706,11 @@ html {
 }
 .cost__arrow.slider-arrow--next {
   right: 0;
+}
+.cost__return-back {
+  position: absolute;
+  bottom: 35px;
+  right: 15px;
 }
 /* Block - upload-file */
 .upload-file {
@@ -2111,4 +2117,13 @@ button.mfp-close {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   max-height: 300px;
+}
+/* Block - return-back */
+.return-back {
+  display: inline-block;
+  padding-top: 45px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.8rem;
+  background: url(../img/return-back-arrows.png) no-repeat center 0;
 }

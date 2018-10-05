@@ -284,6 +284,13 @@
         -ms-transform: translateX(-50%) rotate(0deg);
             transform: translateX(-50%) rotate(0deg);
   }
+  /* Block - cost */
+  .cost__return-back {
+    -webkit-transform: translateY(180%);
+        -ms-transform: translateY(180%);
+            transform: translateY(180%);
+    color: #191919;
+  }
 }
 @media screen and (max-width: 600px) {
   /* Block - projects */
@@ -423,6 +430,13 @@
   }
   img.mfp-img {
     max-height: 290px;
+  }
+  /* Block - cost */
+  .cost__return-back {
+    -webkit-transform: translateY(220%);
+        -ms-transform: translateY(220%);
+            transform: translateY(220%);
+    color: #191919;
   }
 }
 @media screen and (max-width: 425px) {

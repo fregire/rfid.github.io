@@ -3,6 +3,11 @@
 @mobileScreenL: 425px;
 @mobileScreenS: 380px;
 
+@mainFontColor: #6f6f6f;
+@mainHeadlineColor: #191919;
+@btnActionBG: #f65b25;
+@mainFontSize: 1.6rem;
+
 @media screen and (max-width: 1170px){
 	/* Block - projects */
 	.projects__headline {
@@ -338,6 +343,13 @@
 	.more__text:after {
 	  transform: translateX(-50%) rotate(0deg);
 	}
+
+	/* Block - cost */
+	.cost__return-back {
+		transform: translateY(180%);
+
+		color: @mainHeadlineColor;
+	}
 }
 
 @media screen and (max-width: 600px){
@@ -499,7 +511,13 @@
 	img.mfp-img {
 		max-height: 290px;
 	}
+	
+	/* Block - cost */
+	.cost__return-back {
+		transform: translateY(220%);
 
+		color: @mainHeadlineColor;
+	}
 }
 
 @media screen and (max-width: @mobileScreenL){

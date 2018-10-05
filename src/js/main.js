@@ -335,4 +335,12 @@ $(document).ready(function(){
 	    arrowMarkup: '<button title="%title%" type="button" class="works__mfp-arrow slider-arrow slider-arrow--%dir%"></button>' 
 	  }
 	});
+
+	//Вовращение в начало страницы(на самый верх)
+	$('.return-back').click(function() {
+		var elemPath = $(this).attr("href");
+		var topCoords = $(elemPath).offset().top;
+    	$('html, body').animate({scrollTop: topCoords}, 800);
+  		return false;
+    });
 });
