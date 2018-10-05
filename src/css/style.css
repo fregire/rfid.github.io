@@ -585,10 +585,10 @@ html {
   background-color: #fff;
 }
 .works__arrow.slider-arrow--prev {
-  left: -15px;
+  left: -12px;
 }
 .works__arrow.slider-arrow--next {
-  right: -15px;
+  right: -12px;
 }
 .works__show-more {
   display: none;

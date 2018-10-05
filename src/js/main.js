@@ -251,7 +251,7 @@ $(document).ready(function(){
 		nextArrow: "<button class='services__arrow slider-arrow slider-arrow--next' title='Следующие услуги'></button>",
 		responsive: [
 			{
-				breakpoint: 425,
+				breakpoint: 450,
 				settings: "unslick"
 			}
 		]
