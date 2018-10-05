@@ -107,6 +107,14 @@
   .params__group--middle {
     margin: 0 30px;
   }
+  /* Block - cost */
+  .cost__fields-group {
+    width: 32%;
+    min-width: 0;
+  }
+  .cost__politics-text {
+    margin-left: 15px;
+  }
 }
 @media screen and (max-width: 846px) {
   /* Block - projects */
@@ -135,6 +143,18 @@
   }
   .req__consider {
     width: 100%;
+  }
+  /* Block - cost */
+  .cost__fields-group {
+    width: 60%;
+    margin: 0 auto;
+  }
+  .cost__input,
+  .cost__input:last-child {
+    margin-bottom: 15px;
+  }
+  .cost__send-info {
+    left: 33%;
   }
 }
 @media screen and (max-width: 800px) {
@@ -382,9 +402,19 @@
   .params__group:last-child {
     border-top-color: transparent;
   }
-  /* Delete */
+  /* Block - cost */
+  .cost__fields-group {
+    width: 100%;
+    max-width: 400px;
+  }
   .cost__send-info {
-    display: none;
+    position: static;
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
+    max-width: 400px;
+    margin: 15px auto 0;
+    text-align: center;
   }
 }
 @media screen and (max-width: 425px) {
@@ -760,6 +790,13 @@
   /* Block - more */
   .more {
     display: none;
+  }
+  /* Block - upload-file */
+  .upload-file {
+    padding-left: 60px;
+    padding-right: 0;
+    color: #fff;
+    background: transparent url(../img/phone_icon_light.png) no-repeat 0 40%;
   }
 }
 @media screen and (max-width: 380px) {
