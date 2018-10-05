@@ -416,6 +416,14 @@
     margin: 15px auto 0;
     text-align: center;
   }
+  /* Block - mfp */
+  .mfp-content {
+    width: 380px;
+    height: 330px;
+  }
+  img.mfp-img {
+    max-height: 290px;
+  }
 }
 @media screen and (max-width: 425px) {
   /* Block - projects */
@@ -799,6 +807,18 @@
     color: #fff;
     background: transparent url(../img/phone_icon_light.png) no-repeat 0 40%;
   }
+  /* Block - mfp */
+  .mfp-content {
+    width: 290px;
+    height: 270px;
+  }
+  img.mfp-img {
+    max-height: 280px!important;
+  }
+  .mfp-figure:after {
+    width: 180px;
+    height: 180px;
+  }
 }
 @media screen and (max-width: 380px) {
   /* Block - page-header */
@@ -816,5 +836,14 @@
   }
   .cost__shapes .slick-current.slick-center .cost__shape-img {
     max-height: 250px;
+  }
+  .works__mfp-arrow {
+    opacity: 1;
+  }
+  .works__mfp-arrow.slider-arrow--left {
+    left: -5px;
+  }
+  .works__mfp-arrow.slider-arrow--right {
+    right: -5px;
   }
 }

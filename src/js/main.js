@@ -321,5 +321,18 @@ $(document).ready(function(){
 	//Раскрытие текста Преимущества RFID брелка...
 	$(".adv-text__content").click(function(){
 		$(this).toggleClass("adv-text__content--hidden");
-	})
+	});
+
+	// Галерея для наших работ
+	$('.works__item').magnificPopup({
+	  type: 'image',
+	  gallery:{
+	    enabled:true,
+	    showCloseBtn: false,
+	    tCounter: '',
+	    tPrev: 'Предыдущая работа', // title for left button
+  		tNext: 'Следующая работа', // title for right button
+	    arrowMarkup: '<button title="%title%" type="button" class="works__mfp-arrow slider-arrow slider-arrow--%dir%"></button>' 
+	  }
+	});
 });
