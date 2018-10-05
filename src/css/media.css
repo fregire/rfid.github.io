@@ -478,6 +478,7 @@
             transform: translateX(0);
     display: block;
     width: 150px;
+    height: auto;
   }
   .page-header__inner {
     padding-top: 15px;
