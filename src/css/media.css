@@ -676,6 +676,9 @@
   .cost__shape:before {
     display: block;
   }
+  .cost__shape label:after {
+    display: none;
+  }
 }
 @media screen and (max-width: 380px) {
   /* Block - page-header */
