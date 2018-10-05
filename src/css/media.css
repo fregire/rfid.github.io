@@ -665,12 +665,45 @@
   .social__link img {
     width: 100%;
   }
+  /* Block - cost */
+  .cost__shapes {
+    background: url(../img/shape_slider_bg.png) no-repeat center bottom;
+    background-size: 70%;
+  }
+  .cost__shape {
+    height: 250px;
+  }
+  .cost__shape:before {
+    display: block;
+  }
 }
-@media screen and (max-width: 370px) {
+@media screen and (max-width: 380px) {
   /* Block - page-header */
   .page-header__brelok {
     width: 180px;
     bottom: 25%;
     right: 25%;
+  }
+  /* Block - cost */
+  .cost__shapes {
+    background-size: 95%;
+  }
+  .cost__shape {
+    height: 310px;
+  }
+  .cost__shapes .slick-current.slick-center .cost__shape-img {
+    max-height: 250px;
+  }
+  .cost__shape:before {
+    -ms-background-position-y: bottom;
+    background-position-y: bottom;
+    background-size: 100%;
+  }
+  .cost__shape:after {
+    right: 50%;
+    -webkit-transform: translateX(50px);
+        -ms-transform: translateX(50px);
+            transform: translateX(50px);
+    content: "Выбрано";
   }
 }

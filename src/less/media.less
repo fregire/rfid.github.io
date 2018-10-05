@@ -1,7 +1,7 @@
 @laptopScreen: 1024px;
 @tabletScreen: 800px;
 @mobileScreenL: 425px;
-@mobileScreenS: 370px;
+@mobileScreenS: 380px;
 
 @media screen and (max-width: 1170px){
 	/* Block - projects */
@@ -780,6 +780,22 @@
 	.social__link img {
 		width: 100%;
 	}
+
+	/* Block - cost */
+	.cost__shapes {
+		background: url(../img/shape_slider_bg.png) no-repeat center bottom;
+		-webkit-background-size: 70%;
+		background-size: 70%;
+
+	}
+
+	.cost__shape {
+		height: 250px;
+	}
+
+	.cost__shape:before {
+		display: block;
+	}
 }
 
 @media screen and (max-width: @mobileScreenS){
@@ -788,5 +804,33 @@
 		width: 180px;
 		bottom: 25%;
 		right: 25%;
+	}
+
+	/* Block - cost */
+	.cost__shapes {
+		-webkit-background-size: 95%;
+		background-size: 95%;
+	}
+
+	.cost__shape {
+		height: 310px;
+	}
+
+	.cost__shapes .slick-current.slick-center .cost__shape-img {
+		max-height: 250px;
+	}
+
+	.cost__shape:before {
+		-ms-background-position-y: bottom;
+		background-position-y: bottom;
+		-webkit-background-size: 100%;
+		background-size: 100%;
+	}
+
+	.cost__shape:after {
+		right: 50%;
+		transform: translateX(50px);
+
+		content: "Выбрано";
 	}
 }

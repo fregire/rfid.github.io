@@ -263,7 +263,39 @@ $(document).ready(function(){
 		centerMode: true,
 		centerPadding: '0px',
 		focusOnSelect: true,
-		arrows: false
+		arrows: false,
+		responsive: [
+			{
+				breakpoint: 1050,
+				settings: {
+					slidesToShow: 7
+				}
+			},
+			{
+				breakpoint: 900,
+				settings: {
+					slidesToShow: 5
+				}
+			},
+			{
+				breakpoint: 670,
+				settings: {
+					slidesToShow: 3,
+					arrows: true,
+					prevArrow: "<button type='button' class='cost__arrow slider-arrow slider-arrow--prev' title='Предыдущие услуги'></button>",
+					nextArrow: "<button type='button' class='cost__arrow slider-arrow slider-arrow--next' title='Следующие услуги'></button>",
+				}
+			},
+			{
+				breakpoint: 480,
+				settings: {
+					slidesToShow: 1,
+					arrows: true,
+					prevArrow: "<button type='button' class='cost__arrow slider-arrow slider-arrow--prev' title='Предыдущие услуги'></button>",
+					nextArrow: "<button type='button' class='cost__arrow slider-arrow slider-arrow--next' title='Следующие услуги'></button>",
+				}
+			}
+		]
 	});
 
 	// Чекбоксы для рассчета стоимости
@@ -281,8 +313,8 @@ $(document).ready(function(){
 
 	// Открытие характеристик при нажатии на форму брелка в слайдере при отправке формы 
 	$(".params").addClass("params--hidden");
-
-	$(".cost__shape-img").click(function(){
+	
+	$(".cost__shapes").on("afterChange", function(){
 		$(".params").removeClass("params--hidden");
 	});
 

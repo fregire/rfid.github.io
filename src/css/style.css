@@ -1541,7 +1541,7 @@ html {
   outline: none;
 }
 .cost__shapes .slick-current.slick-center .cost__shape-img {
-  max-height: 200px;
+  max-height: 190px;
 }
 .cost__shapes .slick-current.slick-center label:after {
   opacity: 1;
@@ -1551,17 +1551,36 @@ html {
 }
 .cost__shape {
   position: relative;
-  height: 200px;
+  height: 220px;
+}
+.cost__shape:after,
+.cost__shape:before {
+  position: absolute;
+  content: "";
+  display: none;
+}
+.cost__shape:before {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  height: 38px;
+  background: url(../img/shape_item-shadow.png) no-repeat center top;
+  background-size: 170px;
 }
 .cost__shape:after {
-  position: absolute;
   top: 0;
   right: -26px;
-  display: none;
   content: "";
-  width: 26px;
+  width: 80px;
   height: 20px;
-  background: url(../img/tick_icon.png) no-repeat center center;
+  font-size: 1.2rem;
+  line-height: 2.5;
+  background: url(../img/tick_icon.png) no-repeat bottom right;
+  z-index: 10;
 }
 .cost__shape-img:hover {
   cursor: pointer;
@@ -1670,6 +1689,18 @@ html {
 .cost__politics-text a {
   color: #fff;
 }
+.cost__arrow {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: transparent;
+  z-index: 10;
+}
+.cost__arrow.slider-arrow--next {
+  right: 0;
+}
 /* Block - upload-file */
 .upload-file {
   padding: 26px 16px;
@@ -1696,6 +1727,7 @@ html {
 }
 .params--hidden {
   max-height: 0;
+  margin: 0;
   opacity: 0;
   overflow: hidden;
 }
