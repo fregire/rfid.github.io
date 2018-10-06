@@ -1833,9 +1833,6 @@ html {
 .checkbox--theme-action .checkbox__box {
   border-color: #ca5d2d;
 }
-.checkbox--checked .checkbox__box:after {
-  display: block;
-}
 .checkbox__box,
 .checkbox__text {
   display: inline-block;
@@ -2129,9 +2126,11 @@ button.mfp-close {
 /* Block - notifications */
 .notifications {
   position: fixed;
-  bottom: 5px;
+  top: 5px;
   right: 5px;
   width: 250px;
+  display: none;
+  z-index: 20;
 }
 .notifications__message {
   position: relative;
@@ -2150,6 +2149,7 @@ button.mfp-close {
   height: 4px;
   border: 0;
   background: #fff;
+  outline: none;
 }
 .notification__close-btn:hover {
   cursor: pointer;

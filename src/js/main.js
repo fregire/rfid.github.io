@@ -299,17 +299,15 @@ $(document).ready(function(){
 	});
 
 	// Чекбоксы для рассчета стоимости
-	// $(".checkbox").not(".checkbox__more").click(function(){
-	// 	var $checkboxInput = $(this).find(".checkbox__control")
-	// 	var checkboxGroupName = $checkboxInput.attr("name");
-	// 	var $checkboxesWithTheSameGroup = $(".checkbox__control[name='" + checkboxGroupName + "']");
+	$(".checkbox").not(".checkbox__more").click(function(){
+		var $checkboxInput = $(this).find(".checkbox__control");
+		var checkboxGroupName = $checkboxInput.attr("name");
+		var $checkboxesWithTheSameGroup = $(".checkbox__control[name='" + checkboxGroupName + "']");
 
-	// 	$checkboxesWithTheSameGroup.parent().parent().removeClass("checkbox--checked");
-	// 	$checkboxesWithTheSameGroup.prop("checked", false);
+		$checkboxesWithTheSameGroup.parent().parent().removeClass("checkbox--checked");
 
-	// 	$(this).addClass("checkbox--checked");
-	// 	$checkboxInput.prop("checked", true);
-	// });
+		$(this).addClass("checkbox--checked");
+	});
 
 	// Открытие характеристик при нажатии на форму брелка в слайдере при отправке формы 
 	$(".params").addClass("params--hidden");
@@ -344,12 +342,33 @@ $(document).ready(function(){
   		return false;
     });
 
+	// Перечисление сообщений(об отправке, ошибках и тд)
+    var Message = {
+    	NOT_ENOUGH_CONTROLS: "Выберите все необходимые характеристики",
+    	SENDED: "Данные успешно отправлены! Скоро с Вами свяжется наш менеджер"
+    }
+
     // Расчет цены
     $(".cost__apply-btn").click(function(e){
     	e.preventDefault();
+    	// Кол-во групп, содержащих чекбоксы
+    	var amountCheckboxesGroups = $(".params__group").has(".checkbox").length;
+    	var amountCheckedControls = $(".checkbox--checked").length;
+    	var $messageContainer = $(".notifications__text");
+    	var error;
+
+    	// Если кол-во групп не соответсвует кол-ву выбранных чекбоксов
+    	// Значит какие-то чекбоксы пользователь не выбрал
+    	if(amountCheckedControls != amountCheckboxesGroups){
+    		$messageContainer.text(Message.NOT_ENOUGH_CONTROLS);
+    		$(".notifications").delay(100).fadeIn().delay(5000).fadeOut();
+    		error = "Чекбоксы";
+    	}	
+
+    	
 
     	// Если хар-ки все еще скрыты
     	$(".params").removeClass("params--hidden");
-    	
+
     });
 });
