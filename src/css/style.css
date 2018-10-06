@@ -334,10 +334,10 @@ html {
   width: 100%;
   display: none;
   content: "";
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(#fff));
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
+  background: -webkit-linear-gradient(top, transparent, #fff 100%);
+  background: -o-linear-gradient(top, transparent, #fff 100%);
+  background: linear-gradient(to bottom, transparent, #fff 100%);
 }
 .production__text p:first-child {
   max-width: 410px;
@@ -702,10 +702,10 @@ html {
   height: 100%;
   display: block;
   content: "";
-  background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0.1)), to(rgba(255, 255, 255, 0.4)));
-  background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 100%);
-  background: -o-linear-gradient(left, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 100%);
-  background: linear-gradient(to right, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.4) 100%);
+  background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.4)));
+  background: -webkit-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  background: -o-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
   z-index: 2;
 }
 .scheme__item {
@@ -947,10 +947,10 @@ html {
   height: calc(100% + 6px);
   display: block;
   content: "";
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), to(rgba(255, 255, 255, 0.4)));
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.4) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+  background: -webkit-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  background: -o-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
   z-index: 10;
 }
 .shape__btn-action {
@@ -1172,10 +1172,10 @@ html {
   content: "";
   height: 100px;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(75%, #fff), to(#fff));
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
-  background: -o-linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
-  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, #fff 75%, #fff 100%);
+  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(75%, #fff), to(#fff));
+  background: -webkit-linear-gradient(top, transparent 0%, #fff 75%, #fff 100%);
+  background: -o-linear-gradient(top, transparent 0%, #fff 75%, #fff 100%);
+  background: linear-gradient(to bottom, transparent 0%, #fff 75%, #fff 100%);
   opacity: 0;
   -webkit-transition: opacity .4s;
   -o-transition: opacity .4s;
