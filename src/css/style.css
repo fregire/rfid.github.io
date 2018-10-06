@@ -1518,7 +1518,9 @@ html {
 .cost__headline i {
   font-family: "Open Sans", Arial, sans-serif;
   font-style: normal;
-  font-size: 20px;
+  font-size: 1.9rem;
+  text-decoration: none;
+  color: #fff;
 }
 .cost__descr {
   max-width: 470px;
