@@ -344,36 +344,47 @@ $(document).ready(function(){
 
 	// Перечисление сообщений(об отправке, ошибках и тд)
     var Message = {
-    	NOT_ENOUGH_CONTROLS: "Выберите все необходимые характеристики",
+    	NOT_ENOUGH_CONTROLS: "Выберите необходимые параметры для рассчета стоимости",
     	SENDED: "Данные успешно отправлены! Скоро с Вами свяжется наш менеджер",
-    	EMPTY: "Поле формы не может быть пустым",
+    	EMPTY: "Поля формы не могут быть пустыми",
     	INCORRECT_EMAIL: "Введите E-mail в нужном формате",
-    	INCORRECT_PHONE: "Введите корректный номер телефона"
-
+    	INCORRECT_PHONE: "Введите корректный номер телефона",
     }
 
+    var UserRegExp = {
+		PHONE: /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){6,14}(\s*)?$/,
+		NAME: /^[а-яА-ЯёЁa-zA-Z0-9]+$/
+	}
+
     var showMessage = function(message){
-    	$(".notifications").fadeOut()
+    	$(".notifications").fadeOut();
     	$(".notifications__text").text(message);
     	$(".notifications").fadeIn().delay(5000).fadeOut();
     }
 
     // Расчет цены
-    $(".cost__apply-btn").click(function(e){
+
+    // Отключаем проверку формы по умолчанию
+    document.querySelector(".cost__form-block").noValidate = true;
+
+    // Делаем сначала проверку чекбоксов
+    // если они заполнены, то переходим к встроенной проверке input'ов
+    // с помощью html5
+    $(".cost__form-block").submit(function(e){
     	e.preventDefault();
     	// Кол-во групп, содержащих чекбоксы
     	var amountCheckboxesGroups = $(".params__group").has(".checkbox").length;
     	var amountCheckedControls = $(".checkbox--checked").length;
     	var $messageContainer = $(".notifications__text");
-    	var error;
+    	var noValidate;
+
 
     	// Если кол-во групп не соответсвует кол-ву выбранных чекбоксов
     	// Значит какие-то чекбоксы пользователь не выбрал
     	if(amountCheckedControls != amountCheckboxesGroups){
     		showMessage(Message.NOT_ENOUGH_CONTROLS);
+    	} 
 
-    		error = "Чекбоксы";
-    	}	
 
 
 
@@ -381,4 +392,71 @@ $(document).ready(function(){
     	$(".params").removeClass("params--hidden");
 
     });
+
+
+    // Модуль с перетаскиванием файла
+    (function(){
+    	var dropZone = document.querySelector(".upload-file"),
+    		dropZoneText = document.querySelector(".upload-file__text"),
+    		fileInput = document.querySelector(".upload-file__input"),
+    		maxFileSize = 1000000;
+
+    	// В случае если не поддерживается 
+    	if (typeof(window.FileReader) == 'undefined') {
+		    dropZoneText.textContent = 'Не поддерживается браузером!';
+		}
+		 
+		var hightlightDropZone = function(){
+    		dropZone.classList.add("upload-file--on-dragenter");
+    	}
+
+    	var onDropZoneDragover = function(e){
+    		e.preventDefault();
+    		hightlightDropZone();
+    		return false;
+    	}
+
+    	var onDropZoneDragenter = function(e){
+    		e.preventDefault();
+    		hightlightDropZone();
+    		return false;
+    	}
+
+    	var onDropZoneDragleave = function(e){
+    		e.preventDefault();
+    		dropZone.classList.remove("upload-file--on-dragenter");
+    		return false;
+    	}
+
+    	// Записываем файл в переменную, которую потом добавим в 
+    	// FormData 
+    	var onDropZoneDrop = function(e){
+    		e.preventDefault();
+    		var file = e.dataTransfer.files[0];
+    		dropZone.classList.remove("upload-file--on-dragenter");
+        
+			if (file.size > maxFileSize) {
+			    dropZoneText.textContent = 'Файл слишком большой!';
+			    return false;
+			} else {
+				window.file = file;
+				dropZoneText.textContent = file.name;
+			}
+
+    		return false;
+    	}
+
+    	// При выборе файла
+    	var onInputFileChange = function(e){
+    		var fileName = e.srcElement.files[0].name;
+    		dropZoneText.textContent = fileName;
+    	}
+
+    	dropZone.addEventListener("dragover", onDropZoneDragover);
+    	dropZone.addEventListener("dragenter", onDropZoneDragenter);
+    	dropZone.addEventListener("dragleave", onDropZoneDragleave);
+    	dropZone.addEventListener("drop", onDropZoneDrop);
+
+    	fileInput.addEventListener("change", onInputFileChange);
+    })();
 });

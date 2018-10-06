@@ -1666,6 +1666,9 @@ html {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+.cost__input {
+  margin-bottom: 16px;
+}
 .cost__input:last-child {
   margin-bottom: 0;
 }
@@ -1721,6 +1724,9 @@ html {
 }
 .upload-file:hover {
   cursor: pointer;
+}
+.upload-file--on-dragenter {
+  background-color: #F0F0F0;
 }
 .upload-file__text {
   display: block;
