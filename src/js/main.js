@@ -308,7 +308,9 @@ $(document).ready(function(){
 
 		$(this).addClass("checkbox--checked");
 
-		$(this).on("change", showPrice);
+		if(window.isSended){
+			$(this).on("change", showPrice);
+		}
 
 	});
 
@@ -418,6 +420,7 @@ $(document).ready(function(){
     		$(".checkbox").removeClass("checkbox--checked");
     		$(".checkbox .checkbox__control").prop("checked", false);
     		$(".cost__contacts-headline, .cost__fields, .cost__send-info").fadeOut();
+    		window.isSended = true;
     	}
     });
 
