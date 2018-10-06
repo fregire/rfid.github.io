@@ -802,6 +802,12 @@ html {
   background: url(../img/adv-text_bg.png) no-repeat left 70%;
   background-size: 1000px;
 }
+.adv-text--opened {
+  background: -webkit-gradient(linear, left top, left bottom, from(#1A7DB5), to(#0083BB));
+  background: -webkit-linear-gradient(top, #1A7DB5 0%, #0083BB 100%);
+  background: -o-linear-gradient(top, #1A7DB5 0%, #0083BB 100%);
+  background: linear-gradient(to bottom, #1A7DB5 0%, #0083BB 100%);
+}
 .adv-text__inner {
   position: relative;
   max-width: 1100px;

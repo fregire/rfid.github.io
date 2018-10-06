@@ -324,6 +324,7 @@ $(document).ready(function(){
 	//Раскрытие текста Преимущества RFID брелка...
 	$(".adv-text__content").click(function(){
 		$(this).toggleClass("adv-text__content--hidden");
+		$(".adv-text").toggleClass("adv-text--opened");
 	});
 
 	// Галерея для наших работ
