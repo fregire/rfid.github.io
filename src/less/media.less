@@ -523,7 +523,7 @@
 @media screen and (max-width: @mobileScreenL){
 	/* Block - projects */
 	.projects {
-		background: #fff;
+		background: linear-gradient(to right, #02b5e2 0%, #5c73b3 100%);
 	}
 	.projects__inner {
 		display: block;
@@ -531,11 +531,9 @@
 	.projects__headline {
 		width: 100%;
 
-		//color: #fff;
+		color: #fff;
 		font-size: 24px;
 		text-align: center;
-		
-		color: @mainHeadlineColor;
 	}
 	.projects__number {
 		display: inline-block;
@@ -599,7 +597,7 @@
 	}
 
 	.page-header__content {
-		margin-top: 140px;
+		margin-top: 150px;
 	}
 
 	.page-header__logo {
@@ -623,10 +621,10 @@
 		display: inline-block;
 		margin-top: 20px;
 
-		border-color: #000;
+		border-color: #5c73b3;
 	}
 
-	.page-header__phone--hidden:before {
+	.page-header__phone--hidden:after {
 		position: absolute;
 		top: -2px;
 		left: -2px;
@@ -637,11 +635,14 @@
 		content: "";
 
 		background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, .5) 100%);
-		z-index: -1;
 	}
 
 	.page-header__phone--hidden .phone {
+		position: relative;
+
 		color: #000;
+
+		z-index: 10;
 	}
 
 	/* Block - production */
@@ -941,7 +942,7 @@
 	/* Block - cost */
 
 	.cost__cutomize {
-		padding: 15px 0;
+		padding: 30px 10px;
 	}
 	.cost__shapes {
 		background: url(../img/shape_slider_bg.png) no-repeat center bottom;
