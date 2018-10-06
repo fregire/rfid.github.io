@@ -314,7 +314,7 @@ $(document).ready(function(){
 	// Открытие характеристик при нажатии на форму брелка в слайдере при отправке формы 
 	$(".params").addClass("params--hidden");
 	
-	$(".cost__shapes").on("afterChange", function(){
+	$(".cost__shapes").on("beforeChange", function(){
 		$(".params").removeClass("params--hidden");
 	});
 
