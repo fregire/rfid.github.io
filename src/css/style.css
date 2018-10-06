@@ -1593,6 +1593,7 @@ html {
 }
 .cost__shape label {
   display: block;
+  height: 100%;
 }
 .cost__shape label:after {
   position: absolute;
@@ -1818,6 +1819,7 @@ html {
   vertical-align: middle;
 }
 .params__checkbox {
+  position: relative;
   margin-right: 15px;
   margin-bottom: 10px;
 }
@@ -1874,13 +1876,10 @@ html {
   background: url(../img/tick_icon.png) no-repeat;
 }
 .checkbox__control {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  z-index: -1;
+  display: none;
+}
+.checkbox__control:checked + .checkbox__box:after {
+  display: block;
 }
 .checkbox__text {
   color: #464646;
@@ -2126,4 +2125,32 @@ button.mfp-close {
   text-decoration: none;
   font-size: 1.8rem;
   background: url(../img/return-back-arrows.png) no-repeat center 0;
+}
+/* Block - notifications */
+.notifications {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  width: 250px;
+}
+.notifications__message {
+  position: relative;
+  display: block;
+  padding: .5em 1em;
+  color: #fff;
+  font-size: 1.3rem;
+  background: #f65b25;
+  border-radius: 5px;
+}
+.notification__close-btn {
+  position: absolute;
+  top: .5em;
+  right: .5em;
+  width: 15px;
+  height: 4px;
+  border: 0;
+  background: #fff;
+}
+.notification__close-btn:hover {
+  cursor: pointer;
 }

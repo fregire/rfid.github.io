@@ -299,17 +299,17 @@ $(document).ready(function(){
 	});
 
 	// Чекбоксы для рассчета стоимости
-	$(".checkbox").not(".checkbox__more").click(function(){
-		var $checkboxInput = $(this).find(".checkbox__control")
-		var checkboxGroupName = $checkboxInput.attr("name");
-		var $checkboxesWithTheSameGroup = $(".checkbox__control[name='" + checkboxGroupName + "']");
+	// $(".checkbox").not(".checkbox__more").click(function(){
+	// 	var $checkboxInput = $(this).find(".checkbox__control")
+	// 	var checkboxGroupName = $checkboxInput.attr("name");
+	// 	var $checkboxesWithTheSameGroup = $(".checkbox__control[name='" + checkboxGroupName + "']");
 
-		$checkboxesWithTheSameGroup.parent().parent().removeClass("checkbox--checked");
-		$checkboxesWithTheSameGroup.prop("checked", false);
+	// 	$checkboxesWithTheSameGroup.parent().parent().removeClass("checkbox--checked");
+	// 	$checkboxesWithTheSameGroup.prop("checked", false);
 
-		$(this).addClass("checkbox--checked");
-		$checkboxInput.prop("checked", true);
-	});
+	// 	$(this).addClass("checkbox--checked");
+	// 	$checkboxInput.prop("checked", true);
+	// });
 
 	// Открытие характеристик при нажатии на форму брелка в слайдере при отправке формы 
 	$(".params").addClass("params--hidden");
@@ -342,5 +342,14 @@ $(document).ready(function(){
 		var topCoords = $(elemPath).offset().top;
     	$('html, body').animate({scrollTop: topCoords}, 800);
   		return false;
+    });
+
+    // Расчет цены
+    $(".cost__apply-btn").click(function(e){
+    	e.preventDefault();
+
+    	// Если хар-ки все еще скрыты
+    	$(".params").removeClass("params--hidden");
+    	
     });
 });
