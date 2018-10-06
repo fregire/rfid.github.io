@@ -845,6 +845,12 @@
     width: 180px;
     height: 180px;
   }
+  /* Block - sale */
+  .sale--hidden {
+    -webkit-transform: translateX(0);
+        -ms-transform: translateX(0);
+            transform: translateX(0);
+  }
 }
 @media screen and (max-width: 380px) {
   /* Block - page-header */
