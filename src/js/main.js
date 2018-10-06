@@ -304,9 +304,12 @@ $(document).ready(function(){
 		var checkboxGroupName = $checkboxInput.attr("name");
 		var $checkboxesWithTheSameGroup = $(".checkbox__control[name='" + checkboxGroupName + "']");
 
-		$checkboxesWithTheSameGroup.parent().parent().removeClass("checkbox--checked");
+		$checkboxesWithTheSameGroup.parent().removeClass("checkbox--checked");
 
 		$(this).addClass("checkbox--checked");
+
+		$(this).on("change", showPrice);
+
 	});
 
 	// Открытие характеристик при нажатии на форму брелка в слайдере при отправке формы 
@@ -357,10 +360,34 @@ $(document).ready(function(){
 		EMAIL: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
 	}
 
-    var showMessage = function(message){
+    var showMessage = function(message, type){
+    	type = type || "error";
+    	if(type == "error"){
+    		$(".notifications__message").css("background", "#f65b25");
+    	} else {
+    		$(".notifications__message").css("background", "#56de47");
+    	}
     	$(".notifications").fadeOut();
     	$(".notifications__text").text(message);
     	$(".notifications").fadeIn().delay(5000).fadeOut();
+    }
+
+    window.showPrice = function(){
+    	// Кол-во + кол-во одной штуки перемножаются
+    	// Если это пункт "Другое"
+    	var amount = $(".checkbox--checked[data-amount]").attr("data-amount");
+    	var pricePerItem = $(".checkbox--checked[data-" + amount + "]").attr("data-" + amount);
+    	var generalPrice = parseInt(amount) * parseInt(pricePerItem);
+
+    	if(amount === "Другое"){
+    		$(".params__price-descr").removeClass("params__price-descr--price-shown");
+    		$(".params__price-descr").text("Наш менеджер свяжется с Вами в ближайшее время");
+    	} else if(!amount || !pricePerItem || (!amount && !pricePerItem)) {
+    		return;
+    	} else {
+    		$(".params__price-descr").text(generalPrice + " руб.");
+    		$(".params__price-descr").addClass("params__price-descr--price-shown");
+    	}
     }
 
     // Расчет цены
@@ -373,13 +400,25 @@ $(document).ready(function(){
     	var amountCheckboxesGroups = $(".params__group").has(".checkbox").length;
     	var amountCheckedControls = $(".checkbox--checked").length;
     	var $messageContainer = $(".notifications__text");
-
+    	var error;
 
     	// Если кол-во групп не соответсвует кол-ву выбранных чекбоксов
     	// Значит какие-то чекбоксы пользователь не выбрал
     	if(amountCheckedControls != amountCheckboxesGroups){
     		showMessage(Message.NOT_ENOUGH_CONTROLS);
+    		error = "empty";
     	} 
+
+    	if(!error){
+    		// Ajax
+
+    		showMessage(Message.SENDED, "success");
+    		$(".cost__input").val("");
+    		showPrice();
+    		$(".checkbox").removeClass("checkbox--checked");
+    		$(".checkbox .checkbox__control").prop("checked", false);
+    		$(".cost__contacts-headline, .cost__fields, .cost__send-info").fadeOut();
+    	}
     });
 
     $(".cost__apply-btn").click(function(){

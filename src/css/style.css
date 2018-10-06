@@ -1832,6 +1832,13 @@ html {
 }
 .params__price-descr {
   margin: 0;
+  font-family: "Open Sans", Arial, sans-serif;
+  font-size: 1.4rem;
+}
+.params__price-descr--price-shown {
+  color: #191919;
+  font-size: 4rem;
+  font-weight: 700;
 }
 /* Block - checkbox */
 .checkbox:hover {
