@@ -442,19 +442,16 @@
 @media screen and (max-width: 425px) {
   /* Block - projects */
   .projects {
-    background: -webkit-gradient(linear, left top, right top, from(#e6e6e6), to(#4882bd));
-    background: -webkit-linear-gradient(left, #e6e6e6 0%, #4882bd 100%);
-    background: -o-linear-gradient(left, #e6e6e6 0%, #4882bd 100%);
-    background: linear-gradient(to right, #e6e6e6 0%, #4882bd 100%);
+    background: #fff;
   }
   .projects__inner {
     display: block;
   }
   .projects__headline {
     width: 100%;
-    color: #fff;
     font-size: 24px;
     text-align: center;
+    color: #191919;
   }
   .projects__number {
     display: inline-block;
