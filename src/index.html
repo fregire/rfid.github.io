@@ -874,12 +874,36 @@
 					<h3 class="cost__contacts-headline">Чтобы узнать стоимость запоните ваши контактные данные</h3>
 					<div class="cost__fields">
 						<div class="cost__fields-group">
-							<input type="text" class="cost__input input input--size-full" placeholder="Представьтесь, пожалуйста*" required>
-							<input type="tel" class="cost__input input input--size-full" placeholder="Ваш телефон">
+							<input 
+								type="text" 
+								name="user_name" 
+								pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$" 
+								autocomplete="name"
+								class="cost__input input input--size-full" 
+								placeholder="Представьтесь, пожалуйста*" 
+								required>
+							<input 
+								type="tel" 
+								name="user_phone" 
+								pattern="^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){10,14}(\s*)?$"
+								inputmode="numeric"
+								autocomplete="tel"
+								class="cost__input input input--size-full" 
+								placeholder="Ваш телефон">
 						</div>
 						<div class="cost__fields-group">
-							<input type="text" class="cost__input input input--size-full" placeholder="Название компании">
-							<input type="email" class="cost__input input input--size-full" placeholder="E-mail*" required>
+							<input 
+								type="text"
+								name="user_company" 
+								pattern="^[а-яА-ЯёЁa-zA-Z0-9]+$"
+								class="cost__input input input--size-full" 
+								placeholder="Название компании">
+							<input 
+								type="email" 
+								name="user_email" 
+								pattern="^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" 
+								class="cost__input input input--size-full" 
+								placeholder="E-mail*" required>
 						</div>
 						<div class="cost__fields-group">
 							<label class="cost__upload upload-file" dropzone="move">

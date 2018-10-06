@@ -353,7 +353,8 @@ $(document).ready(function(){
 
     var UserRegExp = {
 		PHONE: /^(\s*)?(\+)?([- _():=+]?\d[- _():=+]?){6,14}(\s*)?$/,
-		NAME: /^[а-яА-ЯёЁa-zA-Z0-9]+$/
+		NAME: /^[а-яА-ЯёЁa-zA-Z0-9]+$/,
+		EMAIL: /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/
 	}
 
     var showMessage = function(message){
@@ -363,10 +364,6 @@ $(document).ready(function(){
     }
 
     // Расчет цены
-
-    // Отключаем проверку формы по умолчанию
-    document.querySelector(".cost__form-block").noValidate = true;
-
     // Делаем сначала проверку чекбоксов
     // если они заполнены, то переходим к встроенной проверке input'ов
     // с помощью html5
@@ -376,7 +373,6 @@ $(document).ready(function(){
     	var amountCheckboxesGroups = $(".params__group").has(".checkbox").length;
     	var amountCheckedControls = $(".checkbox--checked").length;
     	var $messageContainer = $(".notifications__text");
-    	var noValidate;
 
 
     	// Если кол-во групп не соответсвует кол-ву выбранных чекбоксов
@@ -384,14 +380,11 @@ $(document).ready(function(){
     	if(amountCheckedControls != amountCheckboxesGroups){
     		showMessage(Message.NOT_ENOUGH_CONTROLS);
     	} 
-
-
-
-
-    	// Если хар-ки все еще скрыты
-    	$(".params").removeClass("params--hidden");
-
     });
+
+    $(".cost__apply-btn").click(function(){
+    	$(".params").removeClass("params--hidden");
+    })
 
 
     // Модуль с перетаскиванием файла
