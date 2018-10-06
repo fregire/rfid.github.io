@@ -345,7 +345,17 @@ $(document).ready(function(){
 	// Перечисление сообщений(об отправке, ошибках и тд)
     var Message = {
     	NOT_ENOUGH_CONTROLS: "Выберите все необходимые характеристики",
-    	SENDED: "Данные успешно отправлены! Скоро с Вами свяжется наш менеджер"
+    	SENDED: "Данные успешно отправлены! Скоро с Вами свяжется наш менеджер",
+    	EMPTY: "Поле формы не может быть пустым",
+    	INCORRECT_EMAIL: "Введите E-mail в нужном формате",
+    	INCORRECT_PHONE: "Введите корректный номер телефона"
+
+    }
+
+    var showMessage = function(message){
+    	$(".notifications").fadeOut()
+    	$(".notifications__text").text(message);
+    	$(".notifications").fadeIn().delay(5000).fadeOut();
     }
 
     // Расчет цены
@@ -360,12 +370,12 @@ $(document).ready(function(){
     	// Если кол-во групп не соответсвует кол-ву выбранных чекбоксов
     	// Значит какие-то чекбоксы пользователь не выбрал
     	if(amountCheckedControls != amountCheckboxesGroups){
-    		$messageContainer.text(Message.NOT_ENOUGH_CONTROLS);
-    		$(".notifications").delay(100).fadeIn().delay(5000).fadeOut();
+    		showMessage(Message.NOT_ENOUGH_CONTROLS);
+
     		error = "Чекбоксы";
     	}	
 
-    	
+
 
     	// Если хар-ки все еще скрыты
     	$(".params").removeClass("params--hidden");
