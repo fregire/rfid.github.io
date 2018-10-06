@@ -335,10 +335,10 @@ html {
   width: 100%;
   display: none;
   content: "";
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
-  background: -webkit-linear-gradient(top, transparent, #fff 100%);
-  background: -o-linear-gradient(top, transparent, #fff 100%);
-  background: linear-gradient(to bottom, transparent, #fff 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(#fff));
+  background-image: -webkit-linear-gradient(top, transparent, #fff 100%);
+  background-image: -o-linear-gradient(top, transparent, #fff 100%);
+  background-image: linear-gradient(to bottom, transparent, #fff 100%);
 }
 .production__text p:first-child {
   max-width: 410px;
@@ -354,10 +354,10 @@ html {
   height: 2px;
   border: 0;
   background: #b7b7b7;
-  background: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(1%, #b7b7b7), color-stop(99%, #b7b7b7), to(transparent));
-  background: -webkit-linear-gradient(left, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
-  background: -o-linear-gradient(left, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
-  background: linear-gradient(to right, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), color-stop(1%, #b7b7b7), color-stop(99%, #b7b7b7), to(transparent));
+  background-image: -webkit-linear-gradient(left, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
+  background-image: -o-linear-gradient(left, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
+  background-image: linear-gradient(to right, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
 }
 /* Block - features */
 .features__inner {
@@ -462,10 +462,10 @@ html {
   border-radius: 50%;
   display: block;
   content: "";
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
-  background: -webkit-linear-gradient(top, transparent, rgba(255, 255, 255, 0.4));
-  background: -o-linear-gradient(top, transparent, rgba(255, 255, 255, 0.4));
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+  background-image: -webkit-linear-gradient(top, transparent, rgba(255, 255, 255, 0.4));
+  background-image: -o-linear-gradient(top, transparent, rgba(255, 255, 255, 0.4));
+  background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4));
 }
 .features__image {
   position: absolute;
@@ -549,10 +549,10 @@ html {
   content: "";
   width: calc(100% + 8px);
   height: calc(100% + 8px);
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(242, 242, 242, 0.4)));
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(242, 242, 242, 0.4) 100%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(242, 242, 242, 0.4) 100%);
-  background: linear-gradient(to bottom, transparent 0%, rgba(242, 242, 242, 0.4) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(242, 242, 242, 0.4)));
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(242, 242, 242, 0.4) 100%);
+  background-image: -o-linear-gradient(top, transparent 0%, rgba(242, 242, 242, 0.4) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(242, 242, 242, 0.4) 100%);
 }
 .works__item-headline {
   margin: 0;
@@ -628,10 +628,10 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
-  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background-image: -o-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
   border-radius: 50%;
   z-index: 2;
 }
@@ -703,10 +703,10 @@ html {
   height: 100%;
   display: block;
   content: "";
-  background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.4)));
-  background: -webkit-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
-  background: -o-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
-  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.4)));
+  background-image: -webkit-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  background-image: -o-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  background-image: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
   z-index: 2;
 }
 .scheme__item {
@@ -803,10 +803,10 @@ html {
   background-size: 1000px;
 }
 .adv-text--opened {
-  background: -webkit-gradient(linear, left top, left bottom, from(#1A7DB5), to(#0083BB));
-  background: -webkit-linear-gradient(top, #1A7DB5 0%, #0083BB 100%);
-  background: -o-linear-gradient(top, #1A7DB5 0%, #0083BB 100%);
-  background: linear-gradient(to bottom, #1A7DB5 0%, #0083BB 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#1A7DB5), to(#0083BB));
+  background-image: -webkit-linear-gradient(top, #1A7DB5 0%, #0083BB 100%);
+  background-image: -o-linear-gradient(top, #1A7DB5 0%, #0083BB 100%);
+  background-image: linear-gradient(to bottom, #1A7DB5 0%, #0083BB 100%);
 }
 .adv-text__inner {
   position: relative;
@@ -954,10 +954,10 @@ html {
   height: calc(100% + 6px);
   display: block;
   content: "";
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
-  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  background-image: -o-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.4) 100%);
   z-index: 10;
 }
 .shape__btn-action {
@@ -1043,10 +1043,10 @@ html {
   width: 100%;
   min-height: 530px;
   color: #fff;
-  background: -webkit-gradient(linear, left top, right top, from(#3988bc), to(#5075ab));
-  background: -webkit-linear-gradient(left, #3988bc 0%, #5075ab 100%);
-  background: -o-linear-gradient(left, #3988bc 0%, #5075ab 100%);
-  background: linear-gradient(to right, #3988bc 0%, #5075ab 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(#3988bc), to(#5075ab));
+  background-image: -webkit-linear-gradient(left, #3988bc 0%, #5075ab 100%);
+  background-image: -o-linear-gradient(left, #3988bc 0%, #5075ab 100%);
+  background-image: linear-gradient(to right, #3988bc 0%, #5075ab 100%);
   overflow: hidden;
 }
 .model:after {
@@ -1179,10 +1179,10 @@ html {
   content: "";
   height: 100px;
   width: 100%;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(75%, #fff), to(#fff));
-  background: -webkit-linear-gradient(top, transparent 0%, #fff 75%, #fff 100%);
-  background: -o-linear-gradient(top, transparent 0%, #fff 75%, #fff 100%);
-  background: linear-gradient(to bottom, transparent 0%, #fff 75%, #fff 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(75%, #fff), to(#fff));
+  background-image: -webkit-linear-gradient(top, transparent 0%, #fff 75%, #fff 100%);
+  background-image: -o-linear-gradient(top, transparent 0%, #fff 75%, #fff 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, #fff 75%, #fff 100%);
   opacity: 0;
   -webkit-transition: opacity .4s;
   -o-transition: opacity .4s;
@@ -1229,10 +1229,10 @@ html {
   content: "";
   width: 43px;
   height: 33px;
-  background: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.3)));
-  background: -webkit-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
-  background: -o-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
-  background: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(transparent), to(rgba(255, 255, 255, 0.3)));
+  background-image: -webkit-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background-image: -o-linear-gradient(left, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background-image: linear-gradient(to right, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
 }
 .applying__sphere-list,
 .applying__order-list {
@@ -1291,10 +1291,10 @@ html {
   border-radius: 50%;
   display: block;
   content: "";
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
-  background: -webkit-linear-gradient(top, transparent, rgba(255, 255, 255, 0.4));
-  background: -o-linear-gradient(top, transparent, rgba(255, 255, 255, 0.4));
-  background: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4));
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.4)));
+  background-image: -webkit-linear-gradient(top, transparent, rgba(255, 255, 255, 0.4));
+  background-image: -o-linear-gradient(top, transparent, rgba(255, 255, 255, 0.4));
+  background-image: linear-gradient(to bottom, transparent, rgba(255, 255, 255, 0.4));
 }
 .applying__order-icon img {
   position: absolute;
@@ -1345,9 +1345,9 @@ html {
 .services__item-wrap {
   position: relative;
   padding: 40px 20px 24px;
-  background: -webkit-linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
-  background: -o-linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
-  background: linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
+  background-image: -webkit-linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
+  background-image: -o-linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
+  background-image: linear-gradient(45deg, #5d78b5 0%, #65acca 100%);
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.37);
           box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.37);
   border-radius: 30px;
@@ -1493,10 +1493,10 @@ html {
 /* Block - cost */
 .cost {
   position: relative;
-  background: -webkit-gradient(linear, left top, left bottom, from(#60a1c7), to(#5c76b6));
-  background: -webkit-linear-gradient(top, #60a1c7 0%, #5c76b6 100%);
-  background: -o-linear-gradient(top, #60a1c7 0%, #5c76b6 100%);
-  background: linear-gradient(to bottom, #60a1c7 0%, #5c76b6 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#60a1c7), to(#5c76b6));
+  background-image: -webkit-linear-gradient(top, #60a1c7 0%, #5c76b6 100%);
+  background-image: -o-linear-gradient(top, #60a1c7 0%, #5c76b6 100%);
+  background-image: linear-gradient(to bottom, #60a1c7 0%, #5c76b6 100%);
 }
 .cost__inner {
   max-width: 1330px;
@@ -1878,10 +1878,10 @@ html {
   left: -3px;
   width: 20px;
   display: block;
-  background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
-  background: -webkit-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
-  background: -o-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
-  background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.3)));
+  background-image: -webkit-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background-image: -o-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
+  background-image: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.3) 100%);
 }
 .checkbox__box:after {
   bottom: 1px;

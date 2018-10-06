@@ -442,10 +442,10 @@
 @media screen and (max-width: 425px) {
   /* Block - projects */
   .projects {
-    background: -webkit-gradient(linear, left top, right top, from(#02b5e2), to(#5c73b3));
-    background: -webkit-linear-gradient(left, #02b5e2 0%, #5c73b3 100%);
-    background: -o-linear-gradient(left, #02b5e2 0%, #5c73b3 100%);
-    background: linear-gradient(to right, #02b5e2 0%, #5c73b3 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#02b5e2), to(#5c73b3));
+    background-image: -webkit-linear-gradient(left, #02b5e2 0%, #5c73b3 100%);
+    background-image: -o-linear-gradient(left, #02b5e2 0%, #5c73b3 100%);
+    background-image: linear-gradient(to right, #02b5e2 0%, #5c73b3 100%);
   }
   .projects__inner {
     display: block;
@@ -538,10 +538,10 @@
     height: calc(100% + 4px);
     display: block;
     content: "";
-    background: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
-    background: -webkit-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.5) 100%);
-    background: -o-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.5) 100%);
-    background: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.5) 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), to(rgba(255, 255, 255, 0.5)));
+    background-image: -webkit-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.5) 100%);
+    background-image: -o-linear-gradient(top, transparent 0%, rgba(255, 255, 255, 0.5) 100%);
+    background-image: linear-gradient(to bottom, transparent 0%, rgba(255, 255, 255, 0.5) 100%);
   }
   .page-header__phone--hidden .phone {
     position: relative;
@@ -600,10 +600,10 @@
   .works {
     position: relative;
     text-align: center;
-    background: -webkit-gradient(linear, left top, left bottom, from(#4883bd), to(#60b0ce));
-    background: -webkit-linear-gradient(top, #4883bd 0%, #60b0ce 100%);
-    background: -o-linear-gradient(top, #4883bd 0%, #60b0ce 100%);
-    background: linear-gradient(to bottom, #4883bd 0%, #60b0ce 100%);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#4883bd), to(#60b0ce));
+    background-image: -webkit-linear-gradient(top, #4883bd 0%, #60b0ce 100%);
+    background-image: -o-linear-gradient(top, #4883bd 0%, #60b0ce 100%);
+    background-image: linear-gradient(to bottom, #4883bd 0%, #60b0ce 100%);
     overflow: hidden;
   }
   .works:after {
