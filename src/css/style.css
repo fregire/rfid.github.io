@@ -360,6 +360,9 @@ html {
   background-image: linear-gradient(to right, transparent, #b7b7b7 1%, #b7b7b7 99%, transparent 100%);
 }
 /* Block - features */
+.features {
+  overflow: hidden;
+}
 .features__inner {
   max-width: 1020px;
   margin: 0 auto;
