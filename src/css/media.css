@@ -847,9 +847,9 @@
   }
   /* Block - sale */
   .sale--hidden {
-    -webkit-transform: translateX(0);
-        -ms-transform: translateX(0);
-            transform: translateX(0);
+    -webkit-transform: none;
+        -ms-transform: none;
+            transform: none;
   }
 }
 @media screen and (max-width: 380px) {
