@@ -13,6 +13,7 @@ var del = require("del");
 var rigger = require("gulp-rigger");
 var sourcemaps = require("gulp-sourcemaps");
 var minjs = require("gulp-uglify");
+var htmlsrc = require("gulp")
 
 imagemin.mozjpeg = require("imagemin-mozjpeg");
 
@@ -48,11 +49,7 @@ gulp.task("img", function() {
 		}));
 });
 
-gulp.task("jslibs", function() {
-	return gulp.src("src/js/**/*.min.js")
-		.pipe(concat("libs.js"))
-		.pipe(gulp.dest("final/js"));
-});
+
 gulp.task("server", ["styles"], function() {
 	server.init({
 		server: "src"
@@ -65,34 +62,67 @@ gulp.task("server", ["styles"], function() {
 		.on("change", server.reload);
 });
 
-gulp.task("minifycss", function() {
-	return gulp.src("src/css/**/slick*")
-		.pipe(minifycss())
-		.pipe(concat({suffix: ".min"}))
-		.pipe(gulp.dest("src/css"));
+
+gulp.task("copy:img", function(){
+	return gulp.src(["src/img/**/*.{svg,jpg,jpeg,png}"])
+		.pipe(gulp.dest("rfid_style/img"));
 });
 
-gulp.task("copy", function(){
-	return gulp.src(["src/img/**/*.{svg,jpg,jpeg,png}", "src/**/*.html"])
-		.pipe(gulp.dest("final"));
+gulp.task("copy:html", function(){
+	return gulp.src(["src/*.html"])
+		.pipe(gulp.dest("rfid_style"));
+});
+
+gulp.task("copy:fonts", function(){
+	return gulp.src(["src/fonts/*.{woff2,woff,ttf}"])
+		.pipe(gulp.dest("rfid_style/fonts"));
+});
+
+gulp.task("build:js", function(){
+	return gulp.src([
+		"src/js/jquery.min.js",
+		"src/js/magnific-popup.min.js",
+		"src/js/slick.min.js",
+		"src/js/main.js"
+	])
+	.pipe(minjs({outSourceMap: "app.js.map"}))
+	.pipe(concat("app.js"))
+	.pipe(gulp.dest("rfid_style/js"))
+});
+
+
+gulp.task("build:img", function() {
+	return gulp.src("src/**/*.{png,jpg,jpeg}")
+		.pipe(imagemin([
+			imagemin.optipng({optimizationLevel: 3}),
+			imagemin.jpegtran({progressive: true}),
+      imagemin.mozjpeg({progressive: true}),
+		]))
+		.pipe(gulp.dest("rfid_style"));
+});
+
+gulp.task("build:css", function() {
+	return gulp.src(
+		[
+			"src/css/fonts.css", 
+			"src/css/normalize.css", 
+			"src/css/slick.css", 
+			"src/css/magnific-popup.css",
+			"src/css/style.css",
+			"src/css/media.css"
+		])
+		.pipe(minifycss())
+		.pipe(concat("app.css"))
+		.pipe(gulp.dest("rfid_style/css"));
 });
 
 gulp.task("del", function(){
-	del("final");
+	del("rfid_style");
 });
 
 gulp.task("build", function(done){
-	run("del", "minifycss", "jslibs", "copy", done);
+	run("del", "build:css", "build:js", "build:img", "copy:fonts", "copy:html", done);
 });
-
-// gulp.task("js:build", function(){
-// 	gulp.src("src/js/main.js")
-// 		.pipe(sourcemaps.init())
-// 		.pipe(rigger())
-// 		.pipe(sourcemaps.write())
-// 		.pipe(gulp.dest("src/js"))
-// 		.pipe(server.stream());
-// });
 
 
 
