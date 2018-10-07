@@ -13,7 +13,26 @@ var del = require("del");
 var rigger = require("gulp-rigger");
 var sourcemaps = require("gulp-sourcemaps");
 var minjs = require("gulp-uglify");
-var htmlsrc = require("gulp")
+var htmlsrc = require("gulp");
+
+var BUILD_PATH = "rfid_style";
+
+var Path = {
+	build: {
+		html: BUILD_PATH,
+		js: BUILD_PATH + "/js/",
+		css: BUILD_PATH + "/css/",
+		fonts: BUILD_PATH + "/fonts/",
+		img: BUILD_PATH + "/img/"
+	},
+	src: {
+		html: "src",
+		js: "src/js/",
+		css: "src/css/",
+		fonts: "src/fonts/",
+		img: "src/img/"
+	}
+}
 
 imagemin.mozjpeg = require("imagemin-mozjpeg");
 
@@ -24,7 +43,7 @@ gulp.task("styles", function() {
 		.pipe(postcss([
 			autoprefixer()
 		]))
-		.pipe(gulp.dest("src/css"))
+		.pipe(gulp.dest(Path.src.css))
 		.pipe(server.stream());
 });
 
@@ -35,18 +54,6 @@ gulp.task("svg", function() {
 
 		]))
 		.pipe(gulp.dest("src/img"));
-});
-
-gulp.task("img", function() {
-	return gulp.src("categories/**/*.{png,jpg,jpeg}")
-		.pipe(imagemin([
-			imagemin.optipng({optimizationLevel: 3}),
-			imagemin.jpegtran({progressive: true}),
-            imagemin.mozjpeg({progressive: true}),
-		]))
-		.pipe(gulp.dest(function(file){
-    		return file.base;
-		}));
 });
 
 
@@ -70,12 +77,12 @@ gulp.task("copy:img", function(){
 
 gulp.task("copy:html", function(){
 	return gulp.src(["src/*.html"])
-		.pipe(gulp.dest("rfid_style"));
+		.pipe(gulp.dest(Path.build.html));
 });
 
 gulp.task("copy:fonts", function(){
 	return gulp.src(["src/fonts/*.{woff2,woff,ttf}"])
-		.pipe(gulp.dest("rfid_style/fonts"));
+		.pipe(gulp.dest(Path.build.fonts));
 });
 
 gulp.task("build:js", function(){
@@ -85,9 +92,9 @@ gulp.task("build:js", function(){
 		"src/js/slick.min.js",
 		"src/js/main.js"
 	])
-	.pipe(minjs({outSourceMap: "app.js.map"}))
+	.pipe(minjs())
 	.pipe(concat("app.js"))
-	.pipe(gulp.dest("rfid_style/js"))
+	.pipe(gulp.dest(Path.build.js))
 });
 
 
@@ -98,7 +105,7 @@ gulp.task("build:img", function() {
 			imagemin.jpegtran({progressive: true}),
       imagemin.mozjpeg({progressive: true}),
 		]))
-		.pipe(gulp.dest("rfid_style"));
+		.pipe(gulp.dest(Path.build.html));
 });
 
 gulp.task("build:css", function() {
@@ -113,7 +120,7 @@ gulp.task("build:css", function() {
 		])
 		.pipe(minifycss())
 		.pipe(concat("app.css"))
-		.pipe(gulp.dest("rfid_style/css"));
+		.pipe(gulp.dest(Path.build.css));
 });
 
 gulp.task("del", function(){
