@@ -513,7 +513,7 @@
   .page-header__content {
     margin-top: 150px;
   }
-  .page-header__logo {
+  .page-header .custom-logo-link {
     width: 70px;
   }
   .page-header__headline {
@@ -653,7 +653,7 @@
     width: 20px;
     height: 20px;
     background-size: 19px;
-    opacity: .6;
+    opacity: 0.6;
   }
   /* Block - shape */
   .shape__content {

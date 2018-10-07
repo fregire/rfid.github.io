@@ -15,7 +15,7 @@ var sourcemaps = require("gulp-sourcemaps");
 var minjs = require("gulp-uglify");
 var htmlsrc = require("gulp");
 
-var BUILD_PATH = "rfid_style";
+var BUILD_PATH = "../themes/rfid_style";
 
 var Path = {
 	build: {
@@ -45,6 +45,7 @@ gulp.task("styles", function() {
 		]))
 		.pipe(gulp.dest(Path.src.css))
 		.pipe(server.stream());
+	;
 });
 
 gulp.task("svg", function() {
